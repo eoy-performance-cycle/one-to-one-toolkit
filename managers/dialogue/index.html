@@ -77,10 +77,22 @@ window.ACT={
     {id:"b",rec:1,en:"The outage was real. Within what you could control, what would you do differently?",ar:"التعطل كان حقيقيًا. ضمن ما كان بيدك، ما الذي كنتِ ستفعلينه بشكل مختلف؟",tag:{en:"Acknowledge, then explore",ar:"اعترف ثم استكشف"},
      why:{en:"It accepts the context, then turns to what was in her hands.",ar:"يقبل السياق، ثم ينتقل إلى ما كان في يدها."}},
     {id:"c",en:"Then let's ignore that objective.",ar:"إذًا لنتجاهل هذا الهدف.",tag:{en:"Skips Explore",ar:"يتجاوز الاستكشاف"},
-     why:{en:"It removes the objective without looking at what she could still influence.",ar:"يُلغي الهدف دون النظر إلى ما كان لا يزال بإمكانها التأثير فيه."}}]}],
+     why:{en:"It removes the objective without looking at what she could still influence.",ar:"يُلغي الهدف دون النظر إلى ما كان لا يزال بإمكانها التأثير فيه."}}]},
+  {type:"choice",id:"plan",label:{en:"Nour: close with a plan",ar:"نور: اختم بخطة"},
+   title:{en:"Before you close",ar:"قبل أن تنهي الاجتماع"},
+   prev:{en:"Back to Nour. You have listened, educated her on the 2.0, and explored what would move it. Time is nearly up.",ar:"نعود إلى نور. استمعت إليها، ووضّحت معنى التقييم 2.0، واستكشفتما ما يمكن أن يرفعه. الوقت يكاد ينتهي."},
+   act:1,who:NOUR,said:{en:"Nour is waiting to hear what happens next.",ar:"تنتظر نور أن تعرف ما سيحدث بعد ذلك."},
+   ask:{en:"How should Faisal close the meeting?",ar:"كيف يجب أن يختم فيصل الاجتماع؟"},
+   opts:[
+    {id:"a",rec:1,en:"Let's turn this into your plan: on-time delivery at 95% by the end of Q2, a weekly supplier delay review, me joining the first two reviews, and a monthly check-in starting 15 January. I'll send it to you in writing today.",ar:"لنحوّل هذا إلى خطتك: التسليم في الموعد بنسبة 95% بنهاية الربع الثاني، ومراجعة أسبوعية لتأخيرات الموردين، وأنضم إليكِ في أول مراجعتين، ومتابعة شهرية تبدأ في 15 يناير. سأرسلها إليكِ مكتوبة اليوم.",tag:{en:"Align: a plan with follow-through",ar:"اتفق: خطة مع متابعة"},
+     why:{en:"The gap becomes a plan with a goal, actions, support and dates, so you both know how she can do better and how you will follow through.",ar:"تتحول الفجوة إلى خطة فيها هدف وإجراءات ودعم ومواعيد، فيعرف كلاكما كيف تتحسن وكيف ستتابعان ذلك."}},
+    {id:"b",en:"Great conversation. Let's catch up again sometime.",ar:"حوار رائع. لنتحدث مرة أخرى في وقت ما.",tag:{en:"No plan",ar:"بلا خطة"},
+     why:{en:"Nothing changes after the meeting. Don't close until the gap is a plan with a follow-up date.",ar:"لن يتغير شيء بعد الاجتماع. لا تنهِه قبل أن تتحول الفجوة إلى خطة بموعد متابعة."}},
+    {id:"c",en:"Just try to do better on delivery next year.",ar:"حاولي فقط أن تتحسني في التسليم العام القادم.",tag:{en:"No clear direction",ar:"بلا توجيه واضح"},
+     why:{en:"It names the gap but not how to close it, who supports her, or when you will check progress.",ar:"يذكر الفجوة لكنه لا يوضح كيف تُسد، ولا من يدعمها، ولا متى ستتابعان التقدم."}}]}],
  doneTitle:{en:"A dialogue, not a contest",ar:"حوار لا منافسة"},
- take:{en:["Listen first: ask for their examples before you explain.","When ratings differ, educate: what each rating means, and the evidence behind yours.","Acknowledge real context and emotion, explore what was in their hands, then agree what happens next."],
-       ar:["استمع أولًا: اطلب أمثلتهم قبل أن تشرح.","عندما تختلف التقييمات، وضّح: معنى كل تقييم، والدليل وراء تقييمك.","اعترف بالسياق الحقيقي والمشاعر، واستكشف ما كان في أيديهم، ثم اتفقا على ما سيحدث بعد ذلك."]},
+ take:{en:["Listen first: ask for their examples before you explain.","When ratings differ, educate: what each rating means, and the evidence behind yours.","Acknowledge real context and emotion, and explore what was in their hands.","Don't close until the gap is a plan: improvement or development, depending on the rating, with actions, support and a follow-up date."],
+       ar:["استمع أولًا: اطلب أمثلتهم قبل أن تشرح.","عندما تختلف التقييمات، وضّح: معنى كل تقييم، والدليل وراء تقييمك.","اعترف بالسياق الحقيقي والمشاعر، واستكشف ما كان في أيديهم.","لا تُنهِ الاجتماع قبل أن تتحول الفجوة إلى خطة: خطة تحسين أو خطة تطوير بحسب التقييم، مع إجراءات ودعم وموعد متابعة."]},
  other:{href:"../../employees/voice/",en:"See the other side: how Nour makes her voice heard",ar:"شاهد الجانب الآخر: كيف تجعل نور صوتها مسموعًا"}
 };
 </script>
