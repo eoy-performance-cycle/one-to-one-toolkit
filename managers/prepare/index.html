@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Plan your 1:1 meeting | Manager series | The Performance One-to-One Toolkit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400&family=Tajawal:wght@500&family=Noto+Sans+Arabic:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#00677F; --teal6:#005063; --teal7:#003C4A; --teal50:#E6F0F2; --teal100:#C2DBE0;
+  --ivory:#FFFBF5; --ivory200:#F7F0E6; --ivory300:#EDE3D4;
+  --char:#181817; --char4:#5C5C56; --char2:#A4A4A0; --char1:#C8C8C5;
+  --orange:#FD622A; --mag:#E31C79; --mag50:#FDEAF2;
+  --display:"Playfair Display", Georgia, serif;
+  --body:"Inter", "Helvetica Neue", Arial, sans-serif;
+  --num:"Playfair Display", Georgia, serif;
+}
+html[lang="ar"]{ --display:"Tajawal", "Noto Sans Arabic", Tahoma, sans-serif; --body:"Noto Sans Arabic", Tahoma, sans-serif; }
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--ivory)}
+body{font-family:var(--body);color:var(--char);font-size:17px;line-height:1.6;letter-spacing:-.011em;-webkit-font-smoothing:antialiased;min-height:100vh}
+html[lang="ar"] body{letter-spacing:0}
+button,input,textarea{font:inherit;color:inherit;letter-spacing:inherit}
+h1,h2,.display{font-family:var(--display);font-weight:400}
+html[lang="ar"] h1,html[lang="ar"] h2,html[lang="ar"] .display{font-weight:500}
+h1{font-size:40px;line-height:1.08;letter-spacing:-.015em}
+h2{font-size:28px;line-height:1.18;letter-spacing:-.01em}
+html[lang="ar"] h1,html[lang="ar"] h2{letter-spacing:0;line-height:1.35}
+.eyebrow{font-weight:500;font-size:12px;line-height:1.4;letter-spacing:.14em;text-transform:uppercase;color:var(--char4)}
+html[lang="ar"] .eyebrow{letter-spacing:0;font-size:14px;text-transform:none}
+.muted{color:var(--char4)}
+.small{font-size:15px;line-height:1.5}
+.num{font-family:var(--num);font-weight:400}
+
+.top{position:sticky;top:0;z-index:5;background:var(--teal);color:var(--ivory)}
+.top-in{max-width:680px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px;gap:12px}
+.wordmark{width:112px;height:auto;display:block;color:var(--ivory)}
+.lang{display:flex;border:1px solid rgba(255,251,245,.5);border-radius:999px;overflow:hidden}
+.lang button{background:none;border:0;color:var(--ivory);padding:6px 14px;font-size:14px;cursor:pointer;min-height:36px}
+.lang button[aria-pressed="true"]{background:var(--ivory);color:var(--teal);font-weight:500}
+
+.prog{max-width:680px;margin:0 auto;padding:16px 20px 0;display:flex;align-items:center;gap:6px}
+.prog[hidden]{display:none}
+.prog i{flex:1;height:4px;border-radius:4px;background:var(--char1);transition:background .3s}
+.prog i.done{background:var(--teal)}
+.prog i.on{background:var(--mag)}
+.prog span{font-size:13px;color:var(--char4);margin-inline-start:8px;white-space:nowrap}
+
+main{max-width:680px;margin:0 auto;padding:24px 20px 56px}
+.screen{display:none}
+.screen.active{display:block}
+.stack>*+*{margin-top:16px}
+.section{margin-top:28px}
+
+.hero{background:var(--teal);color:var(--ivory);margin:-24px -20px 0;padding:32px 20px 36px}
+.hero .eyebrow{color:var(--ivory);opacity:.85}
+.hero h1{font-size:50px;margin-top:10px}
+html[lang="ar"] .hero h1{font-size:42px}
+.hero p{margin-top:12px;font-weight:300;font-size:19px;max-width:30em}
+html[lang="ar"] .hero p{font-weight:400}
+.how{list-style:none;display:grid;gap:12px;counter-reset:h}
+.how li{display:flex;gap:14px;align-items:flex-start;font-size:16px;line-height:1.5}
+.how li::before{counter-increment:h;content:counter(h);flex:none;width:32px;height:32px;border-radius:50%;border:1.5px solid var(--teal);color:var(--teal);display:flex;align-items:center;justify-content:center;font-family:"Playfair Display",Georgia,serif;font-size:17px}
+
+.field label{display:block;font-weight:500;font-size:15px;margin-bottom:8px}
+input[type=email],textarea{width:100%;background:#fff;border:1.5px solid var(--char1);border-radius:10px;padding:14px 16px;font-size:17px;line-height:1.5;outline:none;transition:border-color .2s}
+textarea{min-height:104px;resize:vertical}
+input[type=email]:focus,textarea:focus{border-color:var(--teal)}
+input[aria-invalid="true"]{border-color:var(--orange)}
+input[type=email]{direction:ltr;text-align:start}
+html[lang="ar"] input[type=email]{text-align:right}
+.err{display:none;gap:8px;color:var(--char);font-size:15px;margin-top:8px}
+.err.show{display:flex}
+.hint{font-size:14px;color:var(--char4);margin-top:6px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:12px 24px;border-radius:999px;border:1.5px solid var(--teal);background:var(--teal);color:var(--ivory);font-weight:500;font-size:16px;cursor:pointer;transition:background .2s,opacity .2s}
+.btn:hover{background:var(--teal6)}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+.btn.ghost{background:transparent;color:var(--teal)}
+.btn.ghost:hover{background:var(--teal50)}
+.btn.block{width:100%}
+:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.top :focus-visible{outline-color:var(--ivory)}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%) translateY(20px);background:var(--char);color:var(--ivory);padding:10px 18px;border-radius:999px;font-size:15px;opacity:0;transition:opacity .25s,transform .25s;pointer-events:none;z-index:20}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.preview{position:fixed;inset-inline-end:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));font-size:12px;background:var(--ivory300);color:var(--char4);padding:4px 10px;border-radius:999px;z-index:15}
+.reveal{animation:up .45s ease both}
+@keyframes up{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+@media (min-width:700px){.hero{border-radius:0 0 20px 20px}}
+.roles{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.role{background:#fff;border:1.5px solid var(--char1);border-radius:14px;padding:16px;text-align:start;cursor:pointer;min-height:84px;transition:border-color .2s,background .2s}
+.role b{display:block;font-weight:500;font-size:17px}
+.role span{display:block;font-size:14px;color:var(--char4);margin-top:2px;line-height:1.4}
+.role[aria-pressed="true"]{border-color:var(--teal);background:var(--teal50);box-shadow:inset 0 0 0 1px var(--teal)}
+.dates{display:flex;gap:10px;align-items:center;background:var(--ivory200);border-radius:12px;padding:12px 14px;font-size:15px}
+.dates b{font-weight:500}
+.lead{font-size:16px;color:var(--char4);margin-top:8px}
+.card{background:#fff;border:1px solid var(--ivory300);border-radius:14px;padding:14px 16px}
+.hab{display:flex;flex-direction:column;gap:10px}
+.hab .t{font-size:16px;line-height:1.45}
+.seg{display:flex;gap:8px}
+.seg button{flex:1;min-height:42px;border-radius:999px;border:1.5px solid var(--char1);background:var(--ivory);font-size:14px;cursor:pointer;padding:6px 10px}
+.seg button[aria-pressed="true"].h{background:var(--teal);border-color:var(--teal);color:var(--ivory)}
+.seg button[aria-pressed="true"].g{background:var(--mag);border-color:var(--mag);color:var(--ivory)}
+.seg button:disabled{cursor:default}
+.fb{font-size:15px;line-height:1.5;margin-top:4px;padding:10px 12px;border-radius:10px;background:var(--ivory200)}
+.fb .tag{display:inline-block;font-size:12px;font-weight:500;padding:2px 9px;border-radius:999px;margin-inline-end:6px;vertical-align:1px}
+.tag.ok{background:var(--teal);color:var(--ivory)}
+.tag.no{background:var(--ivory);color:var(--char);border:1px solid var(--char2)}
+.list{list-style:none;display:grid;gap:10px}
+.ord{display:flex;align-items:center;gap:12px}
+.ord .n{width:30px;height:30px;border-radius:50%;border:1.5px solid var(--teal);color:var(--teal);display:flex;align-items:center;justify-content:center;font-family:"Playfair Display",Georgia,serif;flex:none}
+.ord .t{flex:1;font-size:16px;line-height:1.4}
+.mv{display:flex;flex-direction:column;gap:4px}
+.mv button{width:36px;height:30px;border-radius:8px;border:1px solid var(--char1);background:var(--ivory);cursor:pointer;display:flex;align-items:center;justify-content:center}
+.mv button:disabled{opacity:.3;cursor:default}
+.ord.good .n{background:var(--teal);color:var(--ivory)}
+.ord .want{font-size:13px;color:var(--char4)}
+.tbl{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border:1px solid var(--ivory300);border-radius:14px;overflow:hidden;font-size:15px}
+.tbl th{background:var(--teal);color:var(--ivory);font-weight:500;font-size:13px;padding:10px 12px;text-align:start}
+.tbl td{padding:12px;border-top:1px solid var(--ivory300);vertical-align:middle}
+.tbl .r{font-family:"Playfair Display",Georgia,serif;font-size:20px;white-space:nowrap}
+.tbl .r small{display:block;font-family:var(--body);font-size:12px;color:var(--char4)}
+.gap{display:inline-block;font-size:12px;font-weight:500;padding:2px 8px;border-radius:999px;background:var(--mag50);color:var(--mag)}
+.gap.up{background:var(--teal50);color:var(--teal)}
+.pick{display:flex;gap:12px;align-items:flex-start;width:100%;background:#fff;border:1.5px solid var(--char1);border-radius:14px;padding:14px 16px;cursor:pointer;text-align:start;font-size:16px;line-height:1.45}
+.pick .box{width:22px;height:22px;border-radius:6px;border:1.5px solid var(--char2);flex:none;margin-top:1px;display:flex;align-items:center;justify-content:center}
+.pick.radio .box{border-radius:50%}
+.pick[aria-pressed="true"]{border-color:var(--mag);box-shadow:inset 0 0 0 1px var(--mag)}
+.pick[aria-pressed="true"] .box{background:var(--mag);border-color:var(--mag)}
+.pick[aria-pressed="true"] .box::after{content:"";width:8px;height:8px;border-radius:2px;background:#fff}
+.pick:disabled{cursor:default}
+.pick.rec{border-color:var(--teal);box-shadow:inset 0 0 0 1px var(--teal)}
+.pick .w{display:block;font-size:14px;color:var(--char4);margin-top:6px}
+.qh{font-weight:500;margin-bottom:12px}
+.objt{font-family:var(--display);font-size:21px;line-height:1.3;margin-bottom:12px}
+html[lang="ar"] .objt{font-size:19px;line-height:1.6}
+.res{list-style:none;display:grid;gap:10px}
+.res li{display:flex;justify-content:space-between;align-items:center;gap:12px;background:#fff;border:1px solid var(--ivory300);border-radius:12px;padding:12px 14px;font-size:15px}
+.res .v{font-family:"Playfair Display",Georgia,serif;font-size:22px;color:var(--teal);white-space:nowrap}
+.done-hero{background:var(--teal);color:var(--ivory);border-radius:16px;padding:26px 22px}
+.done-hero .eyebrow{color:var(--ivory);opacity:.85}
+.take{list-style:none;display:grid;gap:10px}
+.take li{display:flex;gap:10px;font-size:16px;line-height:1.5}
+.take li::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--teal);margin-top:9px}
+.row2{display:grid;gap:10px}
+@media (max-width:420px){.roles{grid-template-columns:1fr}.tbl{font-size:14px}.tbl td,.tbl th{padding:10px 8px}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <svg class="wordmark" viewBox="370 724 1660 309" fill="currentColor" role="img" aria-label="Floward"><path d="M595.67,1027.52v-301.43h-26.41v305.54h150.61v-28.01c-39.47,15.79-81.59,23.9-124.1,23.9h-.11,0ZM370.2,1031.63h26.41v-181.71h.11c42.51,0,84.63,8.11,124.1,23.9v-28.01h-124.2v-115.61h.11c42.51,0,84.63,8.11,124.1,23.9v-28.01h-150.61v305.54h-.02,0ZM859.25,724.49c-84.76-.4-153.95,68.72-154.18,154.02-.24,85.34,68.09,154.26,153.15,154.48,84.43.22,153.84-69.22,154-154.05.16-85.12-68.12-154.06-152.97-154.46h0ZM985.58,939.56c-9.21,36.63-30.47,63.45-67.03,75.79-24.22,8.17-48.84,6.99-73.11-.87-28.4-9.19-51.86-25.83-71.5-48.03-23.38-26.42-38.37-56.99-44.2-91.84-1.37-8.16-1.67-16.49-2.11-21.06.37-32.44,7.57-58.93,26.35-81.2,18.39-21.79,42.21-33.56,70.72-35.26,38.6-2.29,71.53,11.75,100.43,36.23,26.63,22.57,45.24,50.74,56.07,83.92,8.81,27,11.36,54.58,4.39,82.31h-.01ZM1696.82,934.14c-27.93-18.7-64.04-33.05-65.89-69.11h48.73c32.36,0,71.96-18.71,71.96-68.23,0-59.13-52.51-70.71-80.59-70.71h-99.87v305.54h26.39v-302.29h59.3c88.09,0,87.58,132.44,4.77,132.45h-33.96c0,92.81,110.55,93.71,109.97,169.7h29.06c0-55.07-37.34-75.56-69.87-97.35h0ZM1883.46,726.05h-73.81v305.58h65.18c106.03,0,154.95-86.31,154.95-155.56,0-63.72-50.61-148.67-146.32-150.02h0ZM1877.19,1028.38h-41.15v-299.05h42.26c53.44,0,119.31,54.76,119.31,144.94,0,97.24-60.85,154.11-120.42,154.11h0ZM1332.85,726.09l-66.49,264.09-1.68-3.32-68.9-260.77h-18.91c0,20.03-2.23,39.99-6.65,59.52l-46.6,205.88-72.2-265.4h-29.9l84.09,305.54h19.67c0-22.7,2.54-45.32,7.58-67.45l45.07-198,1.54,3.11,67.04,262.34h21.13c0-22.68,2.8-45.28,8.34-67.27l60.03-238.27h-3.16,0ZM1408.94,726.09c0,28.51-4.75,56.83-14.04,83.79l-76.48,221.75h3.77l34.78-102.9,3.07-3.31h109.08l2.92,3.02,38.61,103.19h29.06l-118.68-305.54h-12.11.02ZM1359.48,922.26l51.09-147.96,58.96,147.96h-110.05,0Z"/></svg>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="ar" aria-pressed="false">العربية</button>
+    </div>
+  </div>
+</header>
+<div class="prog" id="prog" hidden aria-hidden="true"></div>
+<main id="main" tabindex="-1">
+  <section class="screen active" id="scr-welcome" aria-labelledby="w-h">
+    <div class="hero">
+      <div class="eyebrow" data-t="kit"></div>
+      <h1 id="w-h" data-t="w_title"></h1>
+      <p data-t="w_lead"></p>
+    </div>
+    <div class="section" hidden>
+      <div class="qh" data-t="w_role"></div>
+      <div class="roles" role="group">
+        <button type="button" class="role" data-role="manager" aria-pressed="false"><b data-t="r_m"></b><span data-t="r_m_s"></span></button>
+        <button type="button" class="role" data-role="employee" aria-pressed="false"><b data-t="r_e"></b><span data-t="r_e_s"></span></button>
+      </div>
+    </div>
+    <div class="section">
+      <div class="eyebrow" data-t="w_how"></div>
+      <ol class="how" style="margin-top:12px"><li data-t="w_h1"></li><li data-t="w_h2"></li><li data-t="w_h3"></li></ol>
+    </div>
+    <div class="section stack">
+      <div class="field">
+        <label for="email" data-t="w_email_lbl"></label>
+        <input id="email" type="email" inputmode="email" autocomplete="email" placeholder="name@floward.com">
+        <div class="err" id="emailErr" role="alert"><span id="emailErrTxt"></span></div>
+      </div>
+      <p class="small muted" data-t="w_privacy"></p>
+      <button class="btn block" id="startBtn" data-t="w_start"></button>
+      <div class="dates"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" style="flex:none"><rect x="3.5" y="5" width="17" height="15" rx="2.5" fill="none" stroke="#00677F" stroke-width="1.6"/><path d="M3.5 9.5h17M8 3v4M16 3v4" stroke="#00677F" stroke-width="1.6" stroke-linecap="round"/></svg><span data-t="w_dates"></span></div>
+    </div>
+  </section>
+  <section class="screen" id="scr-s1" aria-labelledby="s1-h"></section>
+  <section class="screen" id="scr-s2" aria-labelledby="s2-h"></section>
+  <section class="screen" id="scr-s3" aria-labelledby="s3-h"></section>
+  <section class="screen" id="scr-done" aria-labelledby="dn-h"></section>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="../../config.js"></script>
+<script>
+(function(){
+"use strict";
+var CFG = window.SBI_CONFIG || {};
+var ACTIVITY = "toolkit-m-prepare-v1";
+var DOMAIN = (CFG.emailDomain || "floward.com").toLowerCase();
+var TRACK = (CFG.trackUrl || "").replace(/\/$/,"");
+var LIVE = !!TRACK;
+var lang = "en";
+
+var T={
+en:{kit:"Manager series, Part 1 of 3", w_title:"Plan your 1:1 meeting", w_lead:"Three short steps to walk into your 1:1 meeting ready to explain, listen and agree what comes next.",
+ w_role:"I'm preparing as:", r_m:"Manager", r_m_s:"I'm meeting my team member", r_e:"Employee", r_e_s:"I'm meeting my manager",
+ w_how:"How it works", w_h1:"Sort eight prep habits: which help, which get in the way.", w_h2:"Put the six prep steps in order.", w_h3:"Prepare for Mariam's 1:1 meeting, then compare with the recommendation.",
+ w_email_lbl:"Your Floward email", w_privacy:"We record your email and choices to track participation in this practice. The people in it are fictional, so please do not enter real employee details.",
+ w_start:"Start", w_dates:"", w_dates_l:"1:1 meetings run <b>29 Nov to 5 Dec</b>. About 5 minutes.",
+ e_role:"Please choose Manager or Employee first.", e_empty:"Please enter your Floward email.", e_format:"That doesn't look like an email address.", e_domain:"Please use your @floward.com email.",
+ step:"Step {n} of 3", s1_t:"Helps or gets in the way?", s1_l:"Sort each prep habit. Then check your choices against the recommendation.",
+ helps:"Helps", hurts:"Gets in the way", check:"See the recommendation", cont:"Continue", rec_h:"Recommended: helps", rec_g:"Recommended: gets in the way",
+ s1_res:"{n} of 8 match the recommendation.",
+ s2_t:"Put the steps in order", s2_l:"Use the arrows to move each step. Then compare with the recommended order.",
+ up:"Move up", down:"Move down", s2_res:"{n} of 6 in the recommended place.", rec_pos:"Recommended position {n}",
+ s3_t_m:"Where do you need an example ready?", s3_l_m:"Dana is preparing for her 1:1 meeting with Mariam, Customer Care. Here is Mariam's self-assessment next to Dana's evaluation. Select every objective where Dana should have an example ready.",
+ th_obj:"Objective", th_self:"Mariam", th_mgr:"Dana", gap_dn:"Gap", gap_up:"Rated higher", nogap:"Same",
+ s3_t_e:"Pick your strongest evidence", s3_l_e:"You are Mariam, Customer Care, preparing for your 1:1 meeting with Dana. For each objective, choose the example that carries the most weight.",
+ s3_q:"Now pick the two questions you would bring.", s3_q_h:"Choose two", needex:"Example ready", noex:"No example needed",
+ your:"Your choice", reco:"Recommended", finish:"See my summary",
+ dn_eb:"Your preparation", dn_t:"You're ready to plan yours", r1:"Prep habits", r2:"Step order", r3m:"Gaps that need an example", r3e:"Strongest evidence", r3q:"Questions",
+ dn_take:"Take this into your 1:1 meeting", other:"See the other side: how employees prepare", hub:"Back to the toolkit",
+ tm:["Read her self-assessment first, then put it next to your evaluation.","Every gap needs an example, including the ones where you rated higher.","Book real time, share the purpose, and walk in ready to hear her view."],
+ te:["Bring one specific STAR example for each objective, with a result.","Bring two questions about your growth, not about the number.","Come ready to listen. Feedback you didn't expect is something to explore."],
+ saveFail:"We couldn't save your progress. You can keep going.", other_m:"Employee", other_e:"Manager"},
+ar:{kit:"سلسلة المديرين، الجزء 1 من 3", w_title:"خطّط لاجتماعك الفردي", w_lead:"ثلاث خطوات قصيرة لتدخل اجتماعك الفردي مستعدًا لتوضيح وجهة نظرك والاستماع والاتفاق على الخطوة التالية.",
+ w_role:"أستعد بصفتي:", r_m:"مديرًا", r_m_s:"سألتقي بأحد أعضاء فريقي", r_e:"موظفًا", r_e_s:"سألتقي بمديري",
+ w_how:"كيف يعمل التمرين", w_h1:"صنّف ثماني عادات للاستعداد: أيها يساعد وأيها يعيق.", w_h2:"رتّب خطوات الاستعداد الست.", w_h3:"استعد لاجتماع مريم الفردي، ثم قارن اختياراتك بالتوصية.",
+ w_email_lbl:"بريدك الإلكتروني في فلاورد", w_privacy:"نسجّل بريدك الإلكتروني واختياراتك لمتابعة المشاركة في هذا التمرين. الأشخاص هنا افتراضيون، لذا يُرجى عدم إدخال بيانات موظفين حقيقيين.",
+ w_start:"ابدأ", w_dates:"", w_dates_l:"تُعقد الاجتماعات الفردية <b>من 29 نوفمبر إلى 5 ديسمبر</b>. نحو 5 دقائق.",
+ e_role:"يُرجى اختيار مدير أو موظف أولًا.", e_empty:"يُرجى إدخال بريدك الإلكتروني في فلاورد.", e_format:"يبدو أن هذا ليس بريدًا إلكترونيًا صحيحًا.", e_domain:"يُرجى استخدام بريدك المنتهي بـ ‎@floward.com",
+ step:"الخطوة {n} من 3", s1_t:"يساعد أم يعيق؟", s1_l:"صنّف كل عادة من عادات الاستعداد، ثم قارن اختياراتك بالتوصية.",
+ helps:"يساعد", hurts:"يعيق", check:"اعرض التوصية", cont:"متابعة", rec_h:"التوصية: يساعد", rec_g:"التوصية: يعيق",
+ s1_res:"{n} من 8 تتوافق مع التوصية.",
+ s2_t:"رتّب الخطوات", s2_l:"استخدم الأسهم لتحريك كل خطوة، ثم قارن ترتيبك بالترتيب الموصى به.",
+ up:"إلى الأعلى", down:"إلى الأسفل", s2_res:"{n} من 6 في المكان الموصى به.", rec_pos:"الموضع الموصى به {n}",
+ s3_t_m:"أين تحتاج إلى مثال جاهز؟", s3_l_m:"تستعد دانة لاجتماعها الفردي مع مريم من خدمة العملاء. أمامك التقييم الذاتي لمريم بجانب تقييم دانة. اختر كل هدف تحتاج فيه دانة إلى مثال جاهز.",
+ th_obj:"الهدف", th_self:"مريم", th_mgr:"دانة", gap_dn:"فجوة", gap_up:"تقييم أعلى", nogap:"متطابق",
+ s3_t_e:"اختر أقوى دليل لديك", s3_l_e:"أنت مريم من خدمة العملاء، تستعدين لاجتماعك الفردي مع دانة. لكل هدف، اختاري المثال الأقوى أثرًا.",
+ s3_q:"والآن اختر السؤالين اللذين ستحملهما معك.", s3_q_h:"اختر سؤالين", needex:"مثال جاهز", noex:"لا حاجة إلى مثال",
+ your:"اختيارك", reco:"التوصية", finish:"اعرض الملخص",
+ dn_eb:"استعدادك", dn_t:"أنت جاهز للتخطيط لاجتماعك", r1:"عادات الاستعداد", r2:"ترتيب الخطوات", r3m:"الفجوات التي تحتاج إلى مثال", r3e:"أقوى دليل", r3q:"الأسئلة",
+ dn_take:"خذ هذا معك إلى اجتماعك الفردي", other:"شاهد الجانب الآخر: كيف يستعد الموظفون", hub:"العودة إلى الدليل",
+ tm:["اقرأ تقييمها الذاتي أولًا، ثم ضعه بجانب تقييمك.","كل فجوة تحتاج إلى مثال، بما فيها الفجوات التي قيّمت فيها أعلى.","احجز وقتًا كافيًا، وشارك الهدف من الاجتماع، وادخل مستعدًا لسماع وجهة نظرها."],
+ te:["أحضر مثالًا محددًا بأسلوب STAR لكل هدف، مع نتيجة واضحة.","أحضر سؤالين عن تطورك، لا عن الرقم.","ادخل مستعدًا للاستماع. الملاحظات غير المتوقعة فرصة للفهم."],
+ saveFail:"تعذّر حفظ تقدمك. يمكنك المتابعة.", other_m:"موظف", other_e:"مدير"}
+};
+
+/* ---------- content (fictional people) ---------- */
+var HAB={
+manager:[
+ {id:"read",h:1,en:["Read her self-assessment before the meeting","You know how she sees her year before you say a word, so no gap catches you off guard."],ar:["قراءة تقييمها الذاتي قبل الاجتماع","تعرف كيف ترى عامها قبل أن تقول كلمة، فلا تفاجئك أي فجوة."]},
+ {id:"example",h:1,en:["Prepare one example for each gap","An example turns \"I see it differently\" into something you can both look at."],ar:["تجهيز مثال واحد لكل فجوة","المثال يحوّل عبارة \"أرى الأمر بشكل مختلف\" إلى شيء يمكنكما النظر إليه معًا."]},
+ {id:"book",h:1,en:["Book 45 minutes and share the purpose two days ahead","Real time and a clear purpose show the meeting matters, and give her time to prepare too."],ar:["حجز 45 دقيقة ومشاركة هدف الاجتماع قبله بيومين","الوقت الكافي والهدف الواضح يُظهران أهمية الاجتماع، ويمنحانها وقتًا للاستعداد أيضًا."]},
+ {id:"recog",h:1,en:["Plan what to recognise, not only what to develop","Recognition is part of a fair picture, and it makes development points easier to hear."],ar:["التخطيط لما ستقدّره، لا لما يحتاج إلى تطوير فقط","التقدير جزء من الصورة العادلة، ويجعل نقاط التطوير أسهل في التقبّل."]},
+ {id:"outcome",h:0,en:["Decide the outcome before you listen","If the outcome is fixed, nothing she says can change it, and she will feel that."],ar:["تحديد النتيجة قبل أن تستمع","إذا كانت النتيجة محسومة، فلن يغيّر كلامها شيئًا، وستشعر بذلك."]},
+ {id:"squeeze",h:0,en:["Fit it into 10 minutes between meetings","A rushed slot says the opposite of what the meeting is for and leaves no room for her view."],ar:["حشر الاجتماع في 10 دقائق بين اجتماعين","الوقت المستعجل يعطي عكس رسالة الاجتماع، ولا يترك مساحة لوجهة نظرها."]},
+ {id:"first",h:0,en:["Read the self-assessment for the first time in the room","You end up reacting instead of discussing, and the gaps surprise you in front of her."],ar:["قراءة التقييم الذاتي لأول مرة داخل الاجتماع","ستجد نفسك تتفاعل بدل أن تناقش، وتفاجئك الفجوات أمامها."]},
+ {id:"defend",h:0,en:["Prepare to defend only the low ratings","Gaps where you rated higher need explaining too, and recognition needs preparing as much as concerns."],ar:["الاستعداد للدفاع عن التقييمات المنخفضة فقط","الفجوات التي قيّمت فيها أعلى تحتاج إلى توضيح أيضًا، والتقدير يحتاج إلى استعداد مثل الملاحظات."]}],
+employee:[
+ {id:"reread",h:1,en:["Re-read your self-assessment and comments","You remember what you said and why, so you can talk it through calmly."],ar:["إعادة قراءة تقييمك الذاتي وتعليقاتك","تتذكر ما كتبته وسببه، فتستطيع مناقشته بهدوء."]},
+ {id:"star",h:1,en:["Pick one STAR example per objective","A specific situation with a result carries more weight than a general claim."],ar:["اختيار مثال واحد بأسلوب STAR لكل هدف","الموقف المحدد بنتيجة واضحة أقوى أثرًا من الادعاء العام."]},
+ {id:"questions",h:1,en:["Write two questions about your development","Questions turn the meeting toward what comes next, not only what happened."],ar:["كتابة سؤالين عن تطورك","الأسئلة توجّه الاجتماع نحو ما هو قادم، لا نحو ما حدث فقط."]},
+ {id:"expect",h:1,en:["Note where you expect a different view","Knowing where views may differ lets you prepare evidence and stay calm when it comes up."],ar:["تدوين المواضع التي تتوقع فيها وجهة نظر مختلفة","معرفة مواضع الاختلاف المحتملة تساعدك على تجهيز الدليل والبقاء هادئًا عند طرحها."]},
+ {id:"higher",h:0,en:["Rehearse why every rating should be higher","A fixed position makes it hard to hear anything else, and it sounds like bargaining."],ar:["التدرّب على إثبات أن كل تقييم يجب أن يكون أعلى","الموقف المسبق يصعّب سماع أي شيء آخر، ويبدو كأنه مساومة."]},
+ {id:"talk",h:0,en:["Plan to keep talking until you're heard","Being heard comes from clear evidence and a good question, not from more words."],ar:["التخطيط للاستمرار في الكلام حتى يُسمع صوتك","يُسمع صوتك بالدليل الواضح والسؤال الجيد، لا بكثرة الكلام."]},
+ {id:"general",h:0,en:["Bring general claims like \"I worked very hard\"","Effort matters, but without a result your manager has nothing specific to look at again."],ar:["الاكتفاء بعبارات عامة مثل \"عملت بجد كبير\"","الجهد مهم، لكن من دون نتيجة لا يجد مديرك شيئًا محددًا لإعادة النظر فيه."]},
+ {id:"reject",h:0,en:["Decide not to accept feedback you didn't expect","Unexpected feedback is worth exploring. Closing the door early means missing what you could learn."],ar:["أن تقرر مسبقًا رفض أي ملاحظة لم تتوقعها","الملاحظات غير المتوقعة تستحق الاستكشاف، وإغلاق الباب مبكرًا يضيّع عليك فرصة التعلم."]}]
+};
+var STEPS={
+manager:{why:{en:"You can only map gaps once you have read both sides, and you can only pick examples once you know the gaps. The purpose you share comes from that work, so it comes last. Book the slot early; send the purpose when your prep is done.",ar:"لا يمكنك تحديد الفجوات قبل قراءة الجانبين، ولا اختيار الأمثلة قبل معرفة الفجوات. والهدف الذي تشاركه ينتج عن هذا العمل، لذا يأتي أخيرًا. احجز الموعد مبكرًا، وأرسل الهدف عند انتهاء استعدادك."},
+ list:[{id:"m1",en:"Read the self-assessment",ar:"اقرأ التقييم الذاتي"},{id:"m2",en:"Re-read your evaluation",ar:"أعد قراءة تقييمك"},{id:"m3",en:"Map the gaps",ar:"حدّد الفجوات"},{id:"m4",en:"Prepare one example per gap",ar:"جهّز مثالًا لكل فجوة"},{id:"m5",en:"Choose what to recognise and develop",ar:"اختر ما ستقدّره وما يحتاج إلى تطوير"},{id:"m6",en:"Book the time and share the purpose",ar:"احجز الوقت وشارك الهدف"}]},
+employee:{why:{en:"Start from what you wrote, then find the evidence behind it. Knowing where views may differ tells you which questions to bring. The last two steps are about how you show up in the room: ready to listen, and open to what you didn't expect.",ar:"ابدأ بما كتبته، ثم ابحث عن الدليل الذي يدعمه. معرفة مواضع الاختلاف تحدد الأسئلة التي تحملها معك. والخطوتان الأخيرتان تتعلقان بحضورك داخل الاجتماع: مستعد للاستماع، ومنفتح على ما لم تتوقعه."},
+ list:[{id:"e1",en:"Re-read your self-assessment and comments",ar:"أعد قراءة تقييمك الذاتي وتعليقاتك"},{id:"e2",en:"Recall a STAR example per objective",ar:"استحضر مثالًا بأسلوب STAR لكل هدف"},{id:"e3",en:"Note where you expect a different view",ar:"دوّن المواضع التي تتوقع فيها وجهة نظر مختلفة"},{id:"e4",en:"Prepare two questions about your growth",ar:"جهّز سؤالين عن تطورك"},{id:"e5",en:"Come ready to listen, not only to reply",ar:"ادخل مستعدًا للاستماع، لا للرد فقط"},{id:"e6",en:"Stay open to feedback you didn't expect",ar:"ابقَ منفتحًا على ملاحظات لم تتوقعها"}]}
+};
+var LBL={"3.0":["Meets","يلبي التوقعات"],"3.5":["Above Average","أعلى من المتوسط"],"4.0":["Exceeds","يتجاوز التوقعات"]};
+var GAPS=[
+ {id:"sla",self:"4.0",mgr:"3.0",need:1,en:["Resolve tickets within SLA","She rated herself a full step higher. Bring the SLA figures and one specific week so you both discuss the same facts."],ar:["حل التذاكر ضمن مستوى الخدمة المتفق عليه","قيّمت نفسها أعلى بدرجة كاملة. أحضر أرقام مستوى الخدمة وأسبوعًا محددًا لتناقشا الحقائق نفسها."]},
+ {id:"collab",self:"3.0",mgr:"4.0",need:1,en:["Team collaboration","You rated her higher. Say what you saw, for example how she coached the new joiners, so she knows exactly what to keep doing."],ar:["التعاون مع الفريق","قيّمتها أعلى مما قيّمت نفسها. وضّح ما لاحظته، مثل دعمها للموظفين الجدد، لتعرف بالضبط ما الذي تستمر فيه."]},
+ {id:"quality",self:"3.5",mgr:"3.5",need:0,en:["Quality score","You agree. Recognise it briefly and move on; your preparation time is better spent on the gaps."],ar:["مؤشر الجودة","تتفقان هنا. قدّر ذلك باختصار وانتقل؛ وقت استعدادك أنفع في الفجوات."]},
+ {id:"fcr",self:"3.5",mgr:"3.0",need:1,en:["First-contact resolution","Half a step still matters to her. A concrete example keeps the difference from feeling arbitrary."],ar:["الحل من أول تواصل","نصف درجة ما زال مهمًا بالنسبة لها. المثال الملموس يمنع الفرق من أن يبدو عشوائيًا."]}];
+var EV=[
+ {id:"sla",en:"Resolve tickets within SLA",ar:"حل التذاكر ضمن مستوى الخدمة المتفق عليه",opts:[
+  {id:"a",best:0,en:["I worked very hard on tickets all year and often stayed late.","Effort without a result. Dana can't see what changed because of it."],ar:["عملت بجد كبير على التذاكر طوال العام وكثيرًا ما بقيت بعد الدوام.","جهد بلا نتيجة، فلا ترى دانة ما الذي تغيّر بسببه."]},
+  {id:"b",best:1,en:["During the Ramadan peak the backlog reached 1,200 tickets. I set up a shared reply guide with the team and we cleared it in 3 days.","Situation, task, action and result in two sentences. This is evidence Dana can weigh."],ar:["خلال ذروة رمضان وصل تراكم التذاكر إلى 1,200 تذكرة. أعددت دليل ردود مشتركًا مع الفريق وأنهينا التراكم خلال 3 أيام.","الموقف والمهمة والإجراء والنتيجة في جملتين. هذا دليل تستطيع دانة أن تزنه."]},
+  {id:"c",best:0,en:["Customers usually seem happy with my replies.","A general impression. There is no situation, number or outcome to discuss."],ar:["يبدو العملاء عادةً راضين عن ردودي.","انطباع عام، بلا موقف أو رقم أو نتيجة يمكن مناقشتها."]}]},
+ {id:"collab",en:"Team collaboration",ar:"التعاون مع الفريق",opts:[
+  {id:"a",best:0,en:["I get along with everyone on the team.","Being liked is not the same as collaboration. What did it make possible?"],ar:["علاقتي جيدة مع جميع أعضاء الفريق.","أن تكون محبوبًا لا يعني التعاون بالضرورة. ما الذي أتاحه ذلك؟"]},
+  {id:"b",best:0,en:["I always help when someone asks me.","Closer, but still general. One specific time, with what happened next, would carry more weight."],ar:["أساعد دائمًا عندما يطلب أحد مني ذلك.","أقرب، لكنه ما زال عامًا. موقف واحد محدد وما نتج عنه أقوى أثرًا."]},
+  {id:"c",best:1,en:["When two new agents joined in Q2, I ran four shadowing sessions. Both were handling tickets alone within two weeks instead of the usual four.","A clear situation, your action, and a measurable result for the team."],ar:["عندما انضم موظفان جديدان في الربع الثاني، نظّمت أربع جلسات مرافقة، فأصبحا يتعاملان مع التذاكر وحدهما خلال أسبوعين بدل أربعة أسابيع كالمعتاد.","موقف واضح، وإجراء قمت به، ونتيجة قابلة للقياس للفريق."]}]},
+ {id:"quality",en:"Quality score",ar:"مؤشر الجودة",opts:[
+  {id:"a",best:1,en:["In Q3 audits I averaged 91% against a 90% target. The one dip, in August, came from the new refund policy, so I now check it before every reply.","A result, an honest dip, and what you changed. That builds trust in the rest of your evidence."],ar:["في تدقيقات الربع الثالث كان متوسطي 91% مقابل مستهدف 90%. الانخفاض الوحيد في أغسطس كان بسبب سياسة الاسترداد الجديدة، فأصبحت أراجعها قبل كل رد.","نتيجة، وانخفاض تعترف به، وما غيّرته. هذا يعزّز الثقة في بقية أدلتك."]},
+  {id:"b",best:0,en:["My quality audits were fine.","\"Fine\" gives Dana nothing to recognise or build on."],ar:["كانت تدقيقات الجودة لديّ جيدة.","كلمة \"جيدة\" لا تعطي دانة شيئًا تقدّره أو تبني عليه."]},
+  {id:"c",best:0,en:["Quality depends on the system, not on me.","Context can be real, but this skips your part. Say what was in your hands."],ar:["الجودة تعتمد على النظام لا عليّ.","قد يكون السياق حقيقيًا، لكن هذا يتجاهل دورك. وضّح ما كان في يدك."]}]}];
+var QS=[
+ {id:"skill",good:1,en:["Which skill would make the biggest difference to my results next year?","Looks forward and gives you something concrete to work on."],ar:["ما المهارة التي ستُحدث أكبر فرق في نتائجي العام القادم؟","سؤال يتطلع إلى الأمام ويمنحك شيئًا محددًا تعمل عليه."]},
+ {id:"missed",good:1,en:["Is there anything you saw this year that I didn't mention in my self-assessment?","Invites Dana's view and often brings up strengths or gaps you missed."],ar:["هل لاحظتِ هذا العام شيئًا لم أذكره في تقييمي الذاتي؟","يدعو دانة لمشاركة رأيها، وكثيرًا ما يكشف نقاط قوة أو فجوات غابت عنك."]},
+ {id:"lastyear",good:0,en:["Why isn't my rating higher than last year?","Comparing years puts the focus on the number. Asking how one contribution was considered works better."],ar:["لماذا لم يكن تقييمي أعلى من العام الماضي؟","المقارنة بين الأعوام تركّز على الرقم. السؤال عن كيفية النظر في إسهام محدد أنفع."]},
+ {id:"others",good:0,en:["What ratings did others on the team get?","Other people's ratings are confidential and don't help you plan your own growth."],ar:["ما التقييمات التي حصل عليها زملائي في الفريق؟","تقييمات الآخرين سرية، ولا تساعدك على التخطيط لتطورك."]},
+ {id:"quick",good:0,en:["Can we go through this quickly?","Rushing closes the space for feedback you could use."],ar:["هل يمكننا المرور على هذا بسرعة؟","الاستعجال يغلق المجال أمام ملاحظات قد تفيدك."]}];
+
+/* ---------- state ---------- */
+function shuffle(a){ a=a.slice(); for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var x=a[i];a[i]=a[j];a[j]=x; } return a; }
+function ids(l){ return l.map(function(x){return x.id;}); }
+function scrambled(l){ var o; do{ o=shuffle(l); } while(o.join()===l.join()); return o; }
+var params=new URLSearchParams(location.search), qRole="manager";
+function fresh(role){ return { role:role||null, session:null, email:"", startedAt:null, screen:"welcome",
+  habOrder:role?shuffle(ids(HAB[role])):[], sort:{}, sortDone:false,
+  order:role?scrambled(ids(STEPS[role].list)):[], orderDone:false,
+  gaps:{}, ev:{}, evOrder:{}, qs:{}, qOrder:shuffle(ids(QS)), s3Done:false }; }
+var st=fresh(qRole==="manager"||qRole==="employee"?qRole:null);
+function initRole(r){ if(st.role===r) return; var e=st.email; st=fresh(r); st.email=e; }
+
+/* ---------- data layer (insert-only, never blocks) ---------- */
+function uuid(){ if(window.crypto && crypto.randomUUID) return crypto.randomUUID();
+  return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,function(c){var r=Math.random()*16|0;return (c==="x"?r:(r&3|8)).toString(16);}); }
+var warned=false;
+function post(table,row){
+  if(!LIVE){ if(window.console) console.info("[Preview, not saved]",table,row); return Promise.resolve(true); }
+  return fetch(TRACK+"/"+table,{ method:"POST", keepalive:true, headers:{ "Content-Type":"text/plain;charset=UTF-8" }, body:JSON.stringify(row) })
+    .then(function(r){ if(!r.ok) throw new Error(r.status); return true; })
+    .catch(function(e){ if(!warned){ warned=true; toast(T[lang].saveFail); } if(window.console) console.warn("Save failed",table,e); return false; });
+}
+var sessionReady=Promise.resolve();
+function track(type,step,payload){ if(!st.session) return;
+  var row={ session_id:st.session, activity_id:ACTIVITY, event_type:type, step:step||null, payload:payload||{}, lang:lang };
+  sessionReady.then(function(){ post("events",row); }); }
+function startSession(step){
+  st.session=uuid(); st.startedAt=new Date().toISOString();
+  sessionReady=post("sessions",{ id:st.session, activity_id:ACTIVITY, email:st.email, lang:lang, user_agent:(navigator.userAgent||"").slice(0,300) });
+  sessionReady.then(function(){ post("events",{ session_id:st.session, activity_id:ACTIVITY, event_type:"session_started", step:step, payload:{role:st.role}, lang:lang }); });
+}
+
+/* ---------- helpers ---------- */
+function $(s,c){ return (c||document).querySelector(s); }
+function $$(s,c){ return Array.prototype.slice.call((c||document).querySelectorAll(s)); }
+function esc(s){ return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];}); }
+function fmt(s,o){ return s.replace(/\{(\w+)\}/g,function(_,k){return o[k];}); }
+function by(l,id){ return l.filter(function(x){return x.id===id;})[0]; }
+function toast(m){ var t=$("#toast"); t.textContent=m; t.classList.add("show"); clearTimeout(toast._t); toast._t=setTimeout(function(){t.classList.remove("show");},2400); }
+function applyStatic(){ var L=T[lang]; $$("[data-t]").forEach(function(el){ var v=L[el.getAttribute("data-t")]; if(typeof v==="string" && v) el.textContent=v; });
+  $("[data-t=w_dates]").innerHTML=L.w_dates_l; $$(".role").forEach(function(b){ b.setAttribute("aria-pressed",String(b.getAttribute("data-role")===st.role)); }); }
+var ARW={up:'<svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 15l6-6 6 6" fill="none" stroke="#00677F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+ dn:'<svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="#00677F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'};
+function head(n,title,lead,id){ var L=T[lang]; return '<div class="eyebrow">'+esc(fmt(L.step,{n:n}))+'</div><h2 id="'+id+'" style="margin-top:6px">'+esc(title)+'</h2><p class="lead">'+esc(lead)+'</p>'; }
+
+/* ---------- step 1: sort ---------- */
+function score1(){ var n=0; HAB[st.role].forEach(function(h){ if(st.sort[h.id]===(h.h?"h":"g")) n++; }); return n; }
+function render1(){
+  var L=T[lang], hb=HAB[st.role], done=st.sortDone, h=head(1,L.s1_t,L.s1_l,"s1-h");
+  h+='<ul class="list section">'+st.habOrder.map(function(id){ var x=by(hb,id), c=x[lang], v=st.sort[id];
+    var r='<li class="card hab"><div class="t">'+esc(c[0])+'</div><div class="seg" role="group" aria-label="'+esc(c[0])+'">'
+      +'<button type="button" class="h" data-sort="'+id+'" data-v="h" aria-pressed="'+(v==="h")+'"'+(done?' disabled':'')+'>'+esc(L.helps)+'</button>'
+      +'<button type="button" class="g" data-sort="'+id+'" data-v="g" aria-pressed="'+(v==="g")+'"'+(done?' disabled':'')+'>'+esc(L.hurts)+'</button></div>';
+    if(done) r+='<div class="fb reveal"><span class="tag '+((v===(x.h?"h":"g"))?'ok':'no')+'">'+esc(x.h?L.rec_h:L.rec_g)+'</span>'+esc(c[1])+'</div>';
+    return r+'</li>'; }).join("")+'</ul>';
+  if(!done) h+='<button class="btn block section" id="chk1"'+(Object.keys(st.sort).length<hb.length?' disabled':'')+'>'+esc(L.check)+'</button>';
+  else h+='<div class="dates section"><b>'+esc(fmt(L.s1_res,{n:score1()}))+'</b></div><button class="btn block section" id="go2">'+esc(L.cont)+'</button>';
+  $("#scr-s1").innerHTML=h;
+}
+/* ---------- step 2: order ---------- */
+function score2(){ var n=0, rl=ids(STEPS[st.role].list); st.order.forEach(function(id,i){ if(rl[i]===id) n++; }); return n; }
+function render2(){
+  var L=T[lang], S=STEPS[st.role], rl=ids(S.list), done=st.orderDone, h=head(2,L.s2_t,L.s2_l,"s2-h");
+  h+='<ol class="list section">'+st.order.map(function(id,i){ var x=by(S.list,id), good=done&&rl[i]===id;
+    return '<li class="card ord'+(good?' good':'')+'"><div class="n">'+(i+1)+'</div><div class="t">'+esc(x[lang])+(done&&!good?'<div class="want">'+esc(fmt(L.rec_pos,{n:rl.indexOf(id)+1}))+'</div>':'')+'</div>'
+     +(done?'':'<div class="mv"><button type="button" data-mv="'+i+'" data-d="-1" aria-label="'+esc(L.up+": "+x[lang])+'"'+(i===0?' disabled':'')+'>'+ARW.up+'</button><button type="button" data-mv="'+i+'" data-d="1" aria-label="'+esc(L.down+": "+x[lang])+'"'+(i===st.order.length-1?' disabled':'')+'>'+ARW.dn+'</button></div>')+'</li>'; }).join("")+'</ol>';
+  if(!done) h+='<button class="btn block section" id="chk2">'+esc(L.check)+'</button>';
+  else { h+='<div class="card section reveal"><div class="eyebrow" style="color:var(--teal)">'+esc(L.reco)+'</div><ol style="margin:10px 0 0;padding-inline-start:22px;font-size:15px">'+S.list.map(function(x){return '<li>'+esc(x[lang])+'</li>';}).join("")+'</ol><p class="small muted" style="margin-top:10px">'+esc(S.why[lang])+'</p></div>';
+    h+='<div class="dates section"><b>'+esc(fmt(L.s2_res,{n:score2()}))+'</b></div><button class="btn block section" id="go3">'+esc(L.cont)+'</button>'; }
+  $("#scr-s2").innerHTML=h;
+}
+/* ---------- step 3 ---------- */
+function score3(){ if(st.role==="manager"){ var n=0; GAPS.forEach(function(g){ if(!!st.gaps[g.id]===!!g.need) n++; }); return n; }
+  var e=0; EV.forEach(function(o){ var p=st.ev[o.id]; if(p && by(o.opts,p).best) e++; });
+  var q=0; QS.forEach(function(x){ if(st.qs[x.id] && x.good) q++; }); return [e,q]; }
+function lbl(r){ return LBL[r][lang==="ar"?1:0]; }
+function render3(){
+  var L=T[lang], done=st.s3Done, h;
+  if(st.role==="manager"){
+    h=head(3,L.s3_t_m,L.s3_l_m,"s3-h");
+    h+='<table class="tbl section"><thead><tr><th>'+esc(L.th_obj)+'</th><th>'+esc(L.th_self)+'</th><th>'+esc(L.th_mgr)+'</th></tr></thead><tbody>'+GAPS.map(function(g){
+      var d=parseFloat(g.mgr)-parseFloat(g.self), b=d===0?'<span class="gap" style="background:var(--ivory300);color:var(--char4)">'+esc(L.nogap)+'</span>':(d>0?'<span class="gap up">'+esc(L.gap_up)+'</span>':'<span class="gap">'+esc(L.gap_dn)+'</span>');
+      return '<tr><td>'+esc(g[lang][0])+'<div style="margin-top:4px">'+b+'</div></td><td class="r">'+g.self+'<small>'+esc(lbl(g.self))+'</small></td><td class="r">'+g.mgr+'<small>'+esc(lbl(g.mgr))+'</small></td></tr>'; }).join("")+'</tbody></table>';
+    h+='<div class="section row2">'+GAPS.map(function(g){ var on=!!st.gaps[g.id];
+      var r='<button type="button" class="pick'+(done&&g.need?' rec':'')+'" data-gap="'+g.id+'" aria-pressed="'+on+'"'+(done?' disabled':'')+'><span class="box"></span><span>'+esc(g[lang][0]);
+      if(done) r+='<span class="w"><span class="tag '+(on===!!g.need?'ok':'no')+'" style="font-size:12px;padding:2px 9px;border-radius:999px;margin-inline-end:6px">'+esc(g.need?L.needex:L.noex)+'</span>'+esc(g[lang][1])+'</span>';
+      return r+'</span></button>'; }).join("")+'</div>';
+    if(!done) h+='<button class="btn block section" id="chk3">'+esc(L.check)+'</button>';
+  } else {
+    h=head(3,L.s3_t_e,L.s3_l_e,"s3-h");
+    EV.forEach(function(o){ if(!st.evOrder[o.id]) st.evOrder[o.id]=shuffle(ids(o.opts));
+      h+='<div class="section"><div class="objt">'+esc(o[lang])+'</div><div class="row2" role="radiogroup" aria-label="'+esc(o[lang])+'">'+st.evOrder[o.id].map(function(id){ var x=by(o.opts,id), on=st.ev[o.id]===id;
+        var r='<button type="button" class="pick radio'+(done&&x.best?' rec':'')+'" data-ev="'+o.id+'" data-o="'+id+'" role="radio" aria-checked="'+on+'" aria-pressed="'+on+'"'+(done?' disabled':'')+'><span class="box"></span><span>'+esc(x[lang][0]);
+        if(done&&(on||x.best)) r+='<span class="w">'+(x.best?'<span class="tag ok" style="font-size:12px;padding:2px 9px;border-radius:999px;margin-inline-end:6px">'+esc(L.reco)+'</span>':'')+esc(x[lang][1])+'</span>';
+        return r+'</span></button>'; }).join("")+'</div></div>'; });
+    h+='<div class="section"><div class="qh">'+esc(L.s3_q)+'</div><div class="row2">'+st.qOrder.map(function(id){ var x=by(QS,id), on=!!st.qs[id];
+      var r='<button type="button" class="pick'+(done&&x.good?' rec':'')+'" data-q="'+id+'" aria-pressed="'+on+'"'+(done?' disabled':'')+'><span class="box"></span><span>'+esc(x[lang][0]);
+      if(done&&(on||x.good)) r+='<span class="w">'+(x.good?'<span class="tag ok" style="font-size:12px;padding:2px 9px;border-radius:999px;margin-inline-end:6px">'+esc(L.reco)+'</span>':'')+esc(x[lang][1])+'</span>';
+      return r+'</span></button>'; }).join("")+'</div><p class="hint">'+esc(L.s3_q_h)+'</p></div>';
+    var ready=EV.every(function(o){return st.ev[o.id];}) && Object.keys(st.qs).filter(function(k){return st.qs[k];}).length===2;
+    if(!done) h+='<button class="btn block section" id="chk3"'+(ready?'':' disabled')+'>'+esc(L.check)+'</button>';
+  }
+  if(done) h+='<button class="btn block section" id="goDone">'+esc(L.finish)+'</button>';
+  $("#scr-s3").innerHTML=h;
+}
+/* ---------- summary ---------- */
+function renderDone(){
+  var L=T[lang], m=st.role==="manager", s3=score3();
+  var h='<div class="done-hero"><div class="eyebrow">'+esc(L.dn_eb)+'</div><h1 id="dn-h" style="margin-top:8px">'+esc(L.dn_t)+'</h1></div>';
+  h+='<ul class="res section"><li><span>'+esc(L.r1)+'</span><span class="v">'+score1()+'/8</span></li><li><span>'+esc(L.r2)+'</span><span class="v">'+score2()+'/6</span></li>';
+  h+= m ? '<li><span>'+esc(L.r3m)+'</span><span class="v">'+s3+'/4</span></li>' : '<li><span>'+esc(L.r3e)+'</span><span class="v">'+s3[0]+'/3</span></li><li><span>'+esc(L.r3q)+'</span><span class="v">'+s3[1]+'/2</span></li>';
+  h+='</ul><p class="small muted" style="margin-top:10px">'+esc(lang==="ar"?"الأرقام توضّح مدى توافق اختياراتك مع التوصية، وليست درجة نجاح أو رسوب.":"The numbers show how closely your choices match the recommendation. They are not a pass or fail score.")+'</p>';
+  h+='<div class="section"><div class="eyebrow">'+esc(L.dn_take)+'</div><ul class="take" style="margin-top:12px">'+(m?L.tm:L.te).map(function(t){return '<li>'+esc(t)+'</li>';}).join("")+'</ul></div>';
+  h+='<div class="section stack"><a class="btn block" href="../../'+(m?'employees':'managers')+'/prepare/'+(lang==="ar"?'?lang=ar':'')+'" style="text-decoration:none">'+esc(L.other)+'</a><a class="btn ghost block" href="../" style="text-decoration:none">'+esc(L.hub)+'</a></div>';
+  $("#scr-done").innerHTML=h;
+}
+function renderProg(){
+  var pr=$("#prog"), n={s1:1,s2:2,s3:3}[st.screen]; pr.hidden=!n; if(!n) return;
+  pr.innerHTML=[1,2,3].map(function(i){ return '<i class="'+(i<n?'done':(i===n?'on':''))+'"></i>'; }).join("")+'<span>'+esc(fmt(T[lang].step,{n:n}))+'</span>';
+}
+function show(name,opts){
+  st.screen=name; $$(".screen").forEach(function(s){ s.classList.remove("active"); });
+  ({s1:render1,s2:render2,s3:render3,done:renderDone}[name]||function(){})();
+  $("#scr-"+name).classList.add("active"); renderProg();
+  if(!(opts&&opts.keep)) window.scrollTo(0,0);
+  if(!(opts&&opts.silent)){ $("#main").focus({preventScroll:true}); track("step_viewed",name,{role:st.role}); }
+}
+function setLang(l){
+  if(l===lang) return; lang=l; document.documentElement.lang=l; document.documentElement.dir=l==="ar"?"rtl":"ltr";
+  $$(".lang button").forEach(function(b){ b.setAttribute("aria-pressed",String(b.getAttribute("data-lang")===l)); });
+  applyStatic(); show(st.screen,{silent:true}); track("lang_changed",st.screen,{lang:l});
+}
+function submit(){
+  var s3=score3(), now=new Date(), m=st.role==="manager";
+  var detail={ role:st.role, sort:st.sort, sort_match:score1(), order:st.order, order_match:score2() };
+  if(m){ detail.gaps=st.gaps; detail.gaps_match=s3; } else { detail.evidence=st.ev; detail.evidence_best=s3[0]; detail.questions=Object.keys(st.qs).filter(function(k){return st.qs[k];}); detail.questions_good=s3[1]; }
+  var row={ session_id:st.session, activity_id:ACTIVITY, email:st.email, lang:lang,
+    final_statement:("Role "+st.role+". Habits "+score1()+"/8, order "+score2()+"/6, "+(m?"gaps "+s3+"/4":"evidence "+s3[0]+"/3, questions "+s3[1]+"/2")+"."),
+    quiz:detail, started_at:st.startedAt, duration_seconds:Math.max(0,Math.min(86400,Math.round((now-new Date(st.startedAt))/1000))) };
+  sessionReady.then(function(){ post("submissions",row); track("completed","done",{role:st.role}); });
+}
+
+/* ---------- events ---------- */
+function validEmail(v){ var L=T[lang]; v=v.trim().toLowerCase();
+  if(!v) return [false,L.e_empty]; if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) return [false,L.e_format];
+  if(v.split("@")[1]!==DOMAIN) return [false,L.e_domain]; return [true,v]; }
+function err(msg,el){ $("#emailErrTxt").textContent=msg; $("#emailErr").classList.add("show"); if(el){ el.setAttribute("aria-invalid","true"); el.focus(); } }
+$("#startBtn").addEventListener("click",function(){
+  var inp=$("#email");
+  if(!st.role){ err(T[lang].e_role); $(".role").focus(); return; }
+  var r=validEmail(inp.value); if(!r[0]){ err(r[1],inp); return; }
+  inp.removeAttribute("aria-invalid"); $("#emailErr").classList.remove("show");
+  st.email=r[1]; startSession("welcome"); show("s1");
+});
+$("#email").addEventListener("keydown",function(e){ if(e.key==="Enter") $("#startBtn").click(); });
+$("#email").addEventListener("input",function(){ this.removeAttribute("aria-invalid"); $("#emailErr").classList.remove("show"); });
+
+document.addEventListener("click",function(e){
+  var b=e.target.closest("button"); if(!b||b.disabled) return; var L=T[lang];
+  if(b.hasAttribute("data-lang")){ setLang(b.getAttribute("data-lang")); return; }
+  if(b.hasAttribute("data-role")){ initRole(b.getAttribute("data-role")); applyStatic(); $("#emailErr").classList.remove("show"); return; }
+  if(b.hasAttribute("data-sort")){ st.sort[b.getAttribute("data-sort")]=b.getAttribute("data-v"); var y=window.scrollY; render1(); window.scrollTo(0,y); return; }
+  if(b.id==="chk1"){ st.sortDone=true; track("sort_checked","s1",{role:st.role,sort:st.sort,match:score1()}); render1(); return; }
+  if(b.id==="go2"){ track("step_completed","s1",{}); show("s2"); return; }
+  if(b.hasAttribute("data-mv")){ var i=+b.getAttribute("data-mv"), d=+b.getAttribute("data-d"), j=i+d, o=st.order, t=o[i]; o[i]=o[j]; o[j]=t;
+    var y2=window.scrollY; render2(); window.scrollTo(0,y2); var nb=$('[data-mv="'+j+'"][data-d="'+d+'"]')||$('[data-mv="'+j+'"]'); if(nb) nb.focus({preventScroll:true}); return; }
+  if(b.id==="chk2"){ st.orderDone=true; track("sort_checked","s2",{role:st.role,order:st.order,match:score2()}); render2(); return; }
+  if(b.id==="go3"){ track("step_completed","s2",{}); show("s3"); return; }
+  if(b.hasAttribute("data-gap")){ var g=b.getAttribute("data-gap"); st.gaps[g]=!st.gaps[g]; b.setAttribute("aria-pressed",String(st.gaps[g])); return; }
+  if(b.hasAttribute("data-ev")){ st.ev[b.getAttribute("data-ev")]=b.getAttribute("data-o"); var y3=window.scrollY; render3(); window.scrollTo(0,y3); return; }
+  if(b.hasAttribute("data-q")){ var q=b.getAttribute("data-q"), cnt=Object.keys(st.qs).filter(function(k){return st.qs[k];}).length;
+    if(!st.qs[q] && cnt>=2){ toast(L.s3_q_h); return; } st.qs[q]=!st.qs[q]; var y4=window.scrollY; render3(); window.scrollTo(0,y4); return; }
+  if(b.id==="chk3"){ st.s3Done=true; var s3=score3();
+    track("choice_answered","s3",st.role==="manager"?{role:st.role,gaps:st.gaps,match:s3}:{role:st.role,evidence:st.ev,best:s3[0],questions:Object.keys(st.qs).filter(function(k){return st.qs[k];}),good:s3[1]});
+    var y5=window.scrollY; render3(); window.scrollTo(0,y5); return; }
+  if(b.id==="goDone"){ track("step_completed","s3",{}); show("done"); submit(); return; }
+  if(b.id==="otherBtn"){ var em=st.email; st=fresh(st.role==="manager"?"employee":"manager"); st.email=em; startSession("other-seat"); applyStatic(); show("s1"); return; }
+});
+
+/* ---------- init ---------- */
+if(/^ar\b/i.test(params.get("lang")||"")) setLang("ar"); else applyStatic();
+if(!LIVE){ var pv=document.createElement("div"); pv.className="preview"; pv.textContent="Preview mode: not saving"; document.body.appendChild(pv); }
+})();
+</script>
+</body>
+</html>
