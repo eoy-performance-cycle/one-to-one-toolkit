@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Choose your approach | Manager series | The Performance One-to-One Toolkit</title>
+</head>
+<body>
+<script>
+window.ACT={
+ id:"toolkit-m-feedback-v1",
+ kit:{en:"Manager series, Part 2 of 3",ar:"سلسلة المديرين، الجزء 2 من 3"},
+ title:{en:"Choose your approach",ar:"اختر أسلوبك"},
+ lead:{en:"Decide when a sandwich works and when it hides the message. Then build Hassan's message to Tamer, beat by beat.",ar:"حدّد متى يناسب أسلوب الساندويتش ومتى يُخفي الرسالة، ثم ابنِ رسالة حسن إلى تامر خطوة بخطوة."},
+ how:{en:["Sort four cases: sandwich, or be direct.","Put the five parts of one message in order.","Choose what to say when the employee answers."],
+      ar:["صنّف أربع حالات: الساندويتش أم الأسلوب المباشر.","رتّب الأجزاء الخمسة لرسالة واحدة.","اختر ما تقوله عندما يرد الموظف."]},
+ time:{en:"About 4 minutes.",ar:"نحو 4 دقائق."},
+ steps:[
+  {type:"binary",id:"cases",label:{en:"Sandwich or direct",ar:"ساندويتش أم مباشر"},
+   title:{en:"Sandwich, or be direct?",ar:"ساندويتش أم أسلوب مباشر؟"},
+   lead:{en:"For each team member, choose the approach that gets the message heard.",ar:"لكل عضو في الفريق، اختر الأسلوب الذي يضمن وصول الرسالة."},
+   opts:[{id:"sandwich",en:"Sandwich is fine",ar:"الساندويتش مناسب"},{id:"direct",en:"Be direct",ar:"كن مباشرًا"}],
+   items:[
+    {id:"lina",rec:"sandwich",who:{name:{en:"Lina",ar:"لينا"},role:{en:"Marketing",ar:"التسويق"}},
+     text:{en:"Met every objective this year. One small habit to work on: she rushes the last slides of her presentations.",ar:"حققت جميع أهدافها هذا العام. عادة صغيرة تحتاج إلى تطوير: تستعجل في الشرائح الأخيرة من عروضها."},
+     why:{en:"The picture is balanced and the point is small. The praise around it is honest, so a sandwich can work.",ar:"الصورة متوازنة والملاحظة صغيرة، والثناء حولها صادق، لذا يمكن أن يناسب أسلوب الساندويتش."}},
+    {id:"tamer",rec:"direct",who:{name:{en:"Tamer",ar:"تامر"},role:{en:"Finance",ar:"المالية"}},
+     text:{en:"Month-end reports were late 7 of 12 months, and the board pack slipped twice.",ar:"تأخرت تقارير نهاية الشهر 7 أشهر من 12، وتأخر ملف مجلس الإدارة مرتين."},
+     why:{en:"A serious, repeated gap. Wrapped in praise, it gets lost. Lead with it, clearly.",ar:"فجوة جدية ومتكررة. إذا أُحيطت بالثناء ضاعت الرسالة. ابدأ بها بوضوح."}},
+    {id:"yara",rec:"direct",who:{name:{en:"Yara",ar:"يارا"},role:{en:"Operations",ar:"العمليات"}},
+     text:{en:"A strong year on output, but she missed the mandatory safety training deadline twice.",ar:"عام قوي في الإنتاجية، لكنها فوّتت موعد تدريب السلامة الإلزامي مرتين."},
+     why:{en:"Safety is not negotiable. Praise around it would blur how serious it is.",ar:"السلامة غير قابلة للتفاوض، والثناء حولها يُضعف إدراك خطورتها."}},
+    {id:"khaled",rec:"sandwich",who:{name:{en:"Khaled",ar:"خالد"},role:{en:"Commercial",ar:"القطاع التجاري"}},
+     text:{en:"Exceeded his sales targets. One light suggestion: share pipeline updates with the team a little earlier.",ar:"تجاوز أهداف المبيعات. اقتراح بسيط: مشاركة مستجدات الصفقات مع الفريق في وقت أبكر قليلًا."},
+     why:{en:"Mostly strengths with one light suggestion. A balanced message fits a balanced picture.",ar:"نقاط قوة في الغالب مع اقتراح بسيط. الرسالة المتوازنة تناسب الصورة المتوازنة."}}]},
+  {type:"order",id:"build",label:{en:"Message order",ar:"ترتيب الرسالة"},
+   title:{en:"Build the message",ar:"ابنِ الرسالة"},
+   lead:{en:"Hassan is ready to talk to Tamer. Put the five parts of his message in the order he should say them.",ar:"حسن مستعد للحديث مع تامر. رتّب الأجزاء الخمسة لرسالته بالترتيب الذي يجب أن يقولها به."},
+   context:{who:{name:{en:"Hassan",ar:"حسن"},role:{en:"Manager, Finance",ar:"مدير، المالية"}},text:{en:"Speaking to Tamer about the late month-end reports.",ar:"يتحدث مع تامر عن تأخر تقارير نهاية الشهر."}},
+   items:[
+    {id:"s",k:{en:"Situation",ar:"الموقف"},en:"\"At the Q3 close,",ar:"\"عند إغلاق الربع الثالث،"},
+    {id:"b",k:{en:"Behaviour",ar:"السلوك"},en:"your report reached me on day 9 instead of day 5,",ar:"وصلني تقريرك في اليوم التاسع بدل اليوم الخامس،"},
+    {id:"i",k:{en:"Impact",ar:"الأثر"},en:"so the board pack went out late.",ar:"فتأخر إرسال ملف مجلس الإدارة."},
+    {id:"q",k:{en:"Ask",ar:"اسأل"},en:"What got in the way?",ar:"ما الذي أعاقك؟"},
+    {id:"a",k:{en:"Agree",ar:"اتفق"},en:"Let's agree on day 5 every month, with a check-in after the October close.\"",ar:"لنتفق على اليوم الخامس كل شهر، مع متابعة بعد إغلاق أكتوبر.\""}],
+   why:{en:"Situation, behaviour and impact in one breath, then pause. Ask before you agree a fix: Tamer may know something you don't.",ar:"الموقف والسلوك والأثر في نَفَس واحد، ثم توقّف. اسأل قبل أن تتفقا على الحل، فقد يعرف تامر ما لا تعرفه."}},
+  {type:"choice",id:"followup",label:{en:"Your follow-up",ar:"ردّك التالي"},
+   title:{en:"Tamer answers",ar:"تامر يرد"},
+   prev:{en:"Hassan has said his message, paused, and asked what got in the way.",ar:"قال حسن رسالته، وتوقّف، وسأل عمّا أعاقه."},
+   who:{name:{en:"Tamer",ar:"تامر"},role:{en:"Finance",ar:"المالية"}},
+   said:{en:"The data from Sales always reaches me late.",ar:"بيانات المبيعات تصلني متأخرة دائمًا."},
+   ask:{en:"What should Hassan say next?",ar:"ماذا يجب أن يقول حسن بعد ذلك؟"},
+   opts:[
+    {id:"a",en:"That's not my problem to solve. The deadline stands.",ar:"هذه ليست مشكلتي. الموعد ثابت.",tag:{en:"Skips Explore",ar:"يتجاوز الاستكشاف"},
+     why:{en:"The deadline may stand, but closing the door means the cause never gets fixed.",ar:"قد يبقى الموعد ثابتًا، لكن إغلاق الباب يعني أن السبب لن يُعالَج أبدًا."}},
+    {id:"b",rec:1,en:"What would need to change for you to get the Sales data by day 3?",ar:"ما الذي يجب أن يتغير لتصلك بيانات المبيعات بحلول اليوم الثالث؟",tag:{en:"Explore, then align",ar:"استكشف ثم اتفق"},
+     why:{en:"It takes the reason seriously and turns it into a fix you can agree on together.",ar:"يأخذ السبب بجدية ويحوّله إلى حل تتفقان عليه معًا."}},
+    {id:"c",en:"Okay, then let's leave the reports for now.",ar:"حسنًا، لنترك التقارير جانبًا الآن.",tag:{en:"Skips Align",ar:"يتجاوز الاتفاق"},
+     why:{en:"Dropping the point leaves the gap where it was. Agree a next step instead.",ar:"التخلي عن النقطة يُبقي الفجوة كما هي. اتفقا على خطوة تالية بدلًا من ذلك."}}]}],
+ take:{en:["When the picture is balanced, a sandwich can work. When the gap is serious, lead with it.","Situation, behaviour and impact in one breath. Then pause.","Ask before you agree a fix, and leave with one next step and a date."],
+       ar:["عندما تكون الصورة متوازنة قد يناسب الساندويتش، وعندما تكون الفجوة جدية ابدأ بها.","الموقف والسلوك والأثر في نَفَس واحد، ثم توقّف.","اسأل قبل أن تتفقا على الحل، واخرج بخطوة تالية واحدة وموعد محدد."]},
+ other:{href:"../../employees/",en:"See the other side: the Employee series",ar:"شاهد الجانب الآخر: سلسلة الموظفين"}
+};
+</script>
+<script src="../../config.js"></script>
+<script src="../../engine.js"></script>
+</body>
+</html>
