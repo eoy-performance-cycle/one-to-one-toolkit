@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Say it so it's heard | Employee series | The Performance One-to-One Toolkit</title>
+</head>
+<body>
+<script>
+var FAISAL={name:{en:"Faisal",ar:"فيصل"},role:{en:"Your manager, Supply Chain",ar:"مديرك، سلاسل الإمداد"}};
+window.ACT={
+ id:"toolkit-e-voice-v1",
+ kit:{en:"Employee series, Part 2 of 2",ar:"سلسلة الموظفين، الجزء 2 من 2"},
+ title:{en:"Say it so it's heard",ar:"قلها بطريقة تُسمع"},
+ lead:{en:"Three situations where you see your year differently. Choose the words that get your contribution looked at again, then listen.",ar:"ثلاثة مواقف ترى فيها عامك بشكل مختلف. اختر الكلمات التي تجعل إسهامك يُنظر فيه من جديد، ثم استمع."},
+ how:{en:["Read what your manager says.","Choose what you would say.","See why the recommended wording gets heard."],
+      ar:["اقرأ ما يقوله مديرك.","اختر ما ستقوله.","اطّلع على سبب وصول الصياغة الموصى بها."]},
+ time:{en:"About 4 minutes.",ar:"نحو 4 دقائق."},
+ steps:[
+  {type:"choice",id:"nour1",label:{en:"Nour: raise it",ar:"نور: اطرح رأيك"},
+   title:{en:"Situation 1: you see it differently",ar:"الموقف 1: ترى الأمر بشكل مختلف"},
+   prev:{en:"You are Nour, Supply Chain. On-time PO delivery: you rated yourself 3.0, Faisal rated it 2.0.",ar:"أنتِ نور من سلاسل الإمداد. تسليم أوامر الشراء في موعدها: قيّمتِ نفسك 3.0، وقيّمه فيصل 2.0."},
+   act:1,who:FAISAL,said:{en:"Faisal has shared your ratings and asked for your view.",ar:"شارك فيصل تقييماتك وطلب رأيك."},
+   ask:{en:"What do you say?",ar:"ماذا تقولين؟"},
+   opts:[
+    {id:"a",en:"I don't think this rating is fair. I've worked extremely hard this year.",ar:"لا أرى أن هذا التقييم عادل. لقد عملت بجد كبير هذا العام.",tag:{en:"Effort, no evidence",ar:"جهد بلا دليل"},
+     why:{en:"Effort matters, but it gives Faisal nothing specific to look at again.",ar:"الجهد مهم، لكنه لا يعطي فيصل شيئًا محددًا يعيد النظر فيه."}},
+    {id:"b",rec:1,en:"Thanks for the feedback. I'd like to revisit one contribution. I rebuilt the supplier onboarding checklist, and setup time dropped from 10 days to 6. How was that considered in my rating?",ar:"شكرًا على ملاحظاتك. أود مراجعة إسهام واحد: أعدت بناء قائمة تهيئة الموردين، فانخفض وقت الإعداد من 10 أيام إلى 6. كيف أُخذ ذلك في الاعتبار في تقييمي؟",tag:{en:"Appreciation, one point, evidence, a question",ar:"تقدير، نقطة واحدة، دليل، سؤال"},
+     why:{en:"It names one point, shows the result, and asks a question instead of making a claim.",ar:"يحدد نقطة واحدة، ويعرض النتيجة، ويطرح سؤالًا بدل أن يطلق حكمًا."}},
+    {id:"c",en:"Everyone else on the team got a higher rating than me.",ar:"جميع زملائي في الفريق حصلوا على تقييم أعلى مني.",tag:{en:"Comparison",ar:"مقارنة"},
+     why:{en:"Other people's ratings are confidential, and comparing moves the focus away from your own evidence.",ar:"تقييمات الآخرين سرية، والمقارنة تُبعد التركيز عن دليلك أنت."}}]},
+  {type:"order",id:"build",label:{en:"Your statement",ar:"عبارتك"},
+   title:{en:"Build the statement",ar:"ابنِ العبارة"},
+   lead:{en:"Put the four parts of Nour's statement in the order that gets it heard.",ar:"رتّبي الأجزاء الأربعة لعبارة نور بالترتيب الذي يضمن أن تُسمع."},
+   items:[
+    {id:"a",k:{en:"Appreciation",ar:"تقدير"},en:"\"Thanks for the feedback.",ar:"\"شكرًا على ملاحظاتك."},
+    {id:"p",k:{en:"One specific point",ar:"نقطة محددة"},en:"I'd like to revisit one contribution.",ar:"أود مراجعة إسهام واحد."},
+    {id:"e",k:{en:"Evidence",ar:"دليل"},en:"I rebuilt the supplier onboarding checklist, and setup time dropped from 10 days to 6.",ar:"أعدت بناء قائمة تهيئة الموردين، فانخفض وقت الإعداد من 10 أيام إلى 6."},
+    {id:"q",k:{en:"A question",ar:"سؤال"},en:"How was that considered in my rating?\"",ar:"كيف أُخذ ذلك في الاعتبار في تقييمي؟\""}],
+   why:{en:"Appreciation keeps the tone open, one point keeps it focused, evidence makes it concrete, and a question invites a real answer.",ar:"التقدير يُبقي النبرة منفتحة، والنقطة الواحدة تُبقي التركيز، والدليل يجعلها ملموسة، والسؤال يدعو إلى إجابة حقيقية."}},
+  {type:"choice",id:"nour2",label:{en:"Nour: then listen",ar:"نور: ثم استمعي"},
+   title:{en:"Situation 1, continued: then listen",ar:"الموقف 1، تابع: ثم استمعي"},
+   who:FAISAL,said:{en:"That's a real result, and it counts under your onboarding objective. For on-time delivery, a 2.0 means 70 to 84% of target. We reached 82%.",ar:"هذه نتيجة حقيقية، وتُحتسب ضمن هدف التهيئة. أما التسليم في الموعد، فالتقييم 2.0 يعني من 70 إلى 84% من المستهدف، ووصلنا إلى 82%."},
+   ask:{en:"What do you say next?",ar:"ماذا تقولين بعد ذلك؟"},
+   opts:[
+    {id:"a",en:"So the checklist doesn't count at all?",ar:"إذًا القائمة لا تُحتسب أبدًا؟",tag:{en:"Not listening",ar:"لا تستمعين"},
+     why:{en:"He just said it counts, under onboarding. Check what you heard before you push back.",ar:"قال للتو إنها تُحتسب ضمن هدف التهيئة. تأكدي مما سمعتِه قبل أن تعترضي."}},
+    {id:"b",rec:1,en:"That helps me understand the 2.0. What would get on-time delivery to 3.0 next year?",ar:"هذا يوضح لي التقييم 2.0. ما الذي يوصل التسليم في الموعد إلى 3.0 العام القادم؟",tag:{en:"Listen, then align",ar:"استمعي ثم اتفقي"},
+     why:{en:"You show you understood what the rating means, then turn the conversation to what comes next.",ar:"تُظهرين أنك فهمتِ معنى التقييم، ثم توجّهين الحوار نحو ما هو قادم."}},
+    {id:"c",en:"I still think it's unfair.",ar:"ما زلت أرى أنه غير عادل.",tag:{en:"Repeats the claim",ar:"تكرار الحكم"},
+     why:{en:"It restates the position without new evidence, so the conversation stops moving.",ar:"يكرر الموقف دون دليل جديد، فيتوقف الحوار عن التقدم."}}]},
+  {type:"choice",id:"mariam",label:{en:"Mariam: back it up",ar:"مريم: ادعمي رأيك"},
+   title:{en:"Situation 2: back it up",ar:"الموقف 2: ادعمي رأيك"},
+   prev:{en:"You are Mariam, Customer Care. Resolve tickets within SLA: you rated yourself 4.0, Dana rated it 3.0.",ar:"أنتِ مريم من خدمة العملاء. حل التذاكر ضمن مستوى الخدمة: قيّمتِ نفسك 4.0، وقيّمته دانة 3.0."},
+   act:1,who:{name:{en:"Dana",ar:"دانة"},role:{en:"Your manager, Customer Care",ar:"مديرتك، خدمة العملاء"}},
+   said:{en:"Dana asks how you see your SLA result.",ar:"تسألك دانة عن رؤيتك لنتيجة مستوى الخدمة."},
+   ask:{en:"What do you say?",ar:"ماذا تقولين؟"},
+   opts:[
+    {id:"a",en:"I'm sure I deserve a 4.0.",ar:"أنا متأكدة أنني أستحق 4.0.",tag:{en:"Claim, no evidence",ar:"حكم بلا دليل"},
+     why:{en:"Certainty isn't evidence. Dana has nothing new to weigh.",ar:"اليقين ليس دليلًا، ولا تجد دانة شيئًا جديدًا تزنه."}},
+    {id:"b",rec:1,en:"Thank you. During the Ramadan peak I set up a shared reply guide, and we cleared 1,200 tickets in 3 days. How did that factor into the 3.0?",ar:"شكرًا لكِ. خلال ذروة رمضان أعددت دليل ردود مشتركًا، وأنهينا 1,200 تذكرة خلال 3 أيام. كيف أُخذ ذلك في الاعتبار في التقييم 3.0؟",tag:{en:"Evidence, then a question",ar:"دليل ثم سؤال"},
+     why:{en:"A STAR example with a result, followed by a question, gets the contribution looked at again.",ar:"مثال بأسلوب STAR بنتيجة واضحة، يتبعه سؤال، يجعل الإسهام يُنظر فيه من جديد."}},
+    {id:"c",en:"Fine, whatever you think.",ar:"حسنًا، كما ترين.",tag:{en:"Stays silent",ar:"صمت"},
+     why:{en:"Agreeing just to avoid the conversation means your evidence is never seen.",ar:"الموافقة لتجنب الحوار تعني أن دليلك لن يُرى أبدًا."}}]},
+  {type:"choice",id:"tamer",label:{en:"Tamer: feedback you didn't expect",ar:"تامر: ملاحظة غير متوقعة"},
+   title:{en:"Situation 3: feedback you didn't expect",ar:"الموقف 3: ملاحظة لم تتوقعها"},
+   prev:{en:"You are Tamer, Finance.",ar:"أنت تامر من المالية."},
+   who:{name:{en:"Hassan",ar:"حسن"},role:{en:"Your manager, Finance",ar:"مديرك، المالية"}},
+   said:{en:"At the Q3 close, your report reached me on day 9 instead of day 5, so the board pack went out late. It happened in 7 of 12 months.",ar:"عند إغلاق الربع الثالث، وصلني تقريرك في اليوم التاسع بدل اليوم الخامس، فتأخر ملف مجلس الإدارة. وتكرر ذلك في 7 أشهر من 12."},
+   ask:{en:"What do you say?",ar:"ماذا تقول؟"},
+   opts:[
+    {id:"a",en:"That's not true.",ar:"هذا غير صحيح.",tag:{en:"Defends before checking",ar:"دفاع قبل التحقق"},
+     why:{en:"Denying it before looking at the facts closes the conversation.",ar:"الإنكار قبل النظر في الحقائق يغلق الحوار."}},
+    {id:"b",rec:1,en:"I hadn't realised it was that many. Can we look at those months together? The Sales data often reaches me late, and I'd like to fix that.",ar:"لم أدرك أنها بهذا العدد. هل يمكننا مراجعة تلك الأشهر معًا؟ بيانات المبيعات تصلني متأخرة غالبًا، وأود معالجة ذلك.",tag:{en:"Listen, then raise context",ar:"استمع ثم اطرح السياق"},
+     why:{en:"You take the feedback seriously, then raise the real cause as something to solve together.",ar:"تأخذ الملاحظة بجدية، ثم تطرح السبب الحقيقي كأمر تحلّانه معًا."}},
+    {id:"c",en:"The data from Sales always comes late, so it's not on me.",ar:"بيانات المبيعات تصل متأخرة دائمًا، لذا الأمر ليس مسؤوليتي.",tag:{en:"Blames, no question",ar:"لوم بلا سؤال"},
+     why:{en:"The context may be real, but blaming closes the door. Raise it as a problem to solve together.",ar:"قد يكون السياق حقيقيًا، لكن اللوم يغلق الباب. اطرحه كمشكلة تحلّانها معًا."}}]}],
+ doneTitle:{en:"Heard, and listening",ar:"صوتك مسموع، وأنت تستمع"},
+ take:{en:["Name one specific point, not the whole rating.","Back it with a result, then ask a question instead of making a claim.","Listen to what the rating means, then agree what would move it next time."],
+       ar:["حدّد نقطة واحدة، لا التقييم كله.","ادعمها بنتيجة، ثم اطرح سؤالًا بدل أن تطلق حكمًا.","استمع إلى معنى التقييم، ثم اتفقا على ما يرفعه في المرة القادمة."]},
+ other:{href:"../../managers/dialogue/",en:"See the other side: how Faisal keeps it a dialogue",ar:"شاهد الجانب الآخر: كيف يحافظ فيصل على الحوار"}
+};
+</script>
+<script src="../../config.js"></script>
+<script src="../../engine.js"></script>
+</body>
+</html>
