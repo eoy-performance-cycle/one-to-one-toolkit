@@ -1,0 +1,23 @@
+# Keeps the Supabase project awake. The free plan pauses after about a week with no activity.
+# Every 3 days this sends one empty row to the tracking function. The database checks it and
+# rejects it (no data is written), which counts as activity. If the project is paused or the
+# function is down, the run fails and GitHub emails you.
+name: Keep Supabase awake
+
+on:
+  schedule:
+    - cron: "17 6 */3 * *"
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping the tracking function
+        run: |
+          code=$(curl -s -o /dev/null -w "%{http_code}" -X POST \
+            "https://ilpppwfqddnvzkdtpilu.supabase.co/functions/v1/bundle-track/events" \
+            -H "Origin: https://eoy-performance-cycle.github.io" \
+            -H "Content-Type: text/plain" --data '{}')
+          echo "Status: $code"
+          if [ "$code" = "400" ] || [ "$code" = "201" ]; then echo "Supabase is awake."; else echo "Supabase did not respond as expected. Check the project in the dashboard."; exit 1; fi
