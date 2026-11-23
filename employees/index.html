@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>The Performance One-to-One Toolkit | Floward</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400&family=Tajawal:wght@500&family=Noto+Sans+Arabic:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--teal:#00677F;--teal7:#003C4A;--teal50:#E6F0F2;--ivory:#FFFBF5;--ivory200:#F7F0E6;--ivory300:#EDE3D4;--char:#181817;--char4:#5C5C56;--mag:#E31C79;--display:"Playfair Display",Georgia,serif;--body:"Inter",Arial,sans-serif}
+html[lang="ar"]{--display:"Tajawal","Noto Sans Arabic",Tahoma,sans-serif;--body:"Noto Sans Arabic",Tahoma,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--ivory)}
+body{font-family:var(--body);color:var(--char);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.top{background:var(--teal);color:var(--ivory)}
+.top-in{max-width:680px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px;gap:12px}
+.wordmark{width:112px;height:auto;display:block;color:var(--ivory)}
+.lang{display:flex;border:1px solid rgba(255,251,245,.5);border-radius:999px;overflow:hidden}
+.lang button{background:none;border:0;color:var(--ivory);padding:6px 14px;font:inherit;font-size:14px;cursor:pointer;min-height:36px}
+.lang button[aria-pressed="true"]{background:var(--ivory);color:var(--teal);font-weight:500}
+.hero{background:var(--teal);color:var(--ivory)}
+.hero-in{max-width:680px;margin:0 auto;padding:28px 20px 36px}
+.eyebrow{font-weight:500;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+html[lang="ar"] .eyebrow{letter-spacing:0;font-size:14px;text-transform:none}
+.pill{display:inline-block;margin-top:12px;border:1.5px solid rgba(255,251,245,.6);border-radius:999px;padding:3px 14px;font-size:14px;font-weight:500}
+h1{font-family:var(--display);font-weight:400;font-size:44px;line-height:1.1;margin-top:12px}
+html[lang="ar"] h1{font-weight:500;font-size:38px;line-height:1.35}
+.hero p{margin-top:12px;font-weight:300;font-size:18px;max-width:32em}
+main{max-width:680px;margin:0 auto;padding:24px 20px 56px}
+.dates{background:var(--ivory200);border-radius:12px;padding:12px 14px;font-size:15px}
+h2{font-family:var(--display);font-weight:400;font-size:26px;line-height:1.2;margin-top:32px}
+html[lang="ar"] h2{font-weight:500}
+.acts{list-style:none;display:grid;gap:12px;margin-top:16px}
+.act{display:flex;gap:16px;align-items:center;background:#fff;border:1px solid var(--ivory300);border-radius:16px;padding:16px 18px;color:inherit;text-decoration:none}
+a.act:hover{border-color:var(--teal);background:var(--teal50)}
+.act .n{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--teal);color:var(--teal);display:flex;align-items:center;justify-content:center;font-family:"Playfair Display",Georgia,serif;font-size:19px;flex:none}
+.act b{display:block;font-weight:500}
+.act small{display:block;color:var(--char4);font-size:14px;line-height:1.45}
+.act .go{margin-inline-start:auto;color:var(--teal);font-weight:500;font-size:14px;white-space:nowrap}
+.act.soon{opacity:.6}
+.act.soon .go{color:var(--char4)}
+.seat{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
+.seat a{display:block;background:var(--teal);color:var(--ivory);border-radius:16px;padding:20px;text-decoration:none;min-height:170px}
+.seat a.e{background:var(--teal7)}
+.seat a b{display:block;font-family:var(--display);font-weight:400;font-size:26px;line-height:1.15;margin-top:8px}
+html[lang="ar"] .seat a b{font-weight:500}
+.seat a small{display:block;font-size:15px;opacity:.9;margin-top:8px;line-height:1.45}
+.mirror{margin-top:32px;border:1.5px solid var(--ivory300);border-radius:16px;padding:16px 18px;font-size:15px;color:var(--char4)}
+.mirror a{color:var(--teal);font-weight:500}
+:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+@media (max-width:480px){.seat{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <svg class="wordmark" viewBox="370 724 1660 309" fill="currentColor" role="img" aria-label="Floward"><path d="M595.67,1027.52v-301.43h-26.41v305.54h150.61v-28.01c-39.47,15.79-81.59,23.9-124.1,23.9h-.11,0ZM370.2,1031.63h26.41v-181.71h.11c42.51,0,84.63,8.11,124.1,23.9v-28.01h-124.2v-115.61h.11c42.51,0,84.63,8.11,124.1,23.9v-28.01h-150.61v305.54h-.02,0ZM859.25,724.49c-84.76-.4-153.95,68.72-154.18,154.02-.24,85.34,68.09,154.26,153.15,154.48,84.43.22,153.84-69.22,154-154.05.16-85.12-68.12-154.06-152.97-154.46h0ZM985.58,939.56c-9.21,36.63-30.47,63.45-67.03,75.79-24.22,8.17-48.84,6.99-73.11-.87-28.4-9.19-51.86-25.83-71.5-48.03-23.38-26.42-38.37-56.99-44.2-91.84-1.37-8.16-1.67-16.49-2.11-21.06.37-32.44,7.57-58.93,26.35-81.2,18.39-21.79,42.21-33.56,70.72-35.26,38.6-2.29,71.53,11.75,100.43,36.23,26.63,22.57,45.24,50.74,56.07,83.92,8.81,27,11.36,54.58,4.39,82.31h-.01ZM1696.82,934.14c-27.93-18.7-64.04-33.05-65.89-69.11h48.73c32.36,0,71.96-18.71,71.96-68.23,0-59.13-52.51-70.71-80.59-70.71h-99.87v305.54h26.39v-302.29h59.3c88.09,0,87.58,132.44,4.77,132.45h-33.96c0,92.81,110.55,93.71,109.97,169.7h29.06c0-55.07-37.34-75.56-69.87-97.35h0ZM1883.46,726.05h-73.81v305.58h65.18c106.03,0,154.95-86.31,154.95-155.56,0-63.72-50.61-148.67-146.32-150.02h0ZM1877.19,1028.38h-41.15v-299.05h42.26c53.44,0,119.31,54.76,119.31,144.94,0,97.24-60.85,154.11-120.42,154.11h0ZM1332.85,726.09l-66.49,264.09-1.68-3.32-68.9-260.77h-18.91c0,20.03-2.23,39.99-6.65,59.52l-46.6,205.88-72.2-265.4h-29.9l84.09,305.54h19.67c0-22.7,2.54-45.32,7.58-67.45l45.07-198,1.54,3.11,67.04,262.34h21.13c0-22.68,2.8-45.28,8.34-67.27l60.03-238.27h-3.16,0ZM1408.94,726.09c0,28.51-4.75,56.83-14.04,83.79l-76.48,221.75h3.77l34.78-102.9,3.07-3.31h109.08l2.92,3.02,38.61,103.19h29.06l-118.68-305.54h-12.11.02ZM1359.48,922.26l51.09-147.96,58.96,147.96h-110.05,0Z"/></svg>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="ar" aria-pressed="false">العربية</button>
+    </div>
+  </div>
+</header>
+<div class="hero"><div class="hero-in"><div class="eyebrow" id="eb"></div><div id="pill"></div><h1 id="t"></h1><p id="l"></p></div></div>
+<main id="main"></main>
+<script>
+(function(){
+var T={en:{kit:"The Performance One-to-One Toolkit",root_t:"Two seats, one conversation",root_l:"A short video series for each side of the 1:1 meeting, each video followed by its own practice activity.",
+ m:"Manager series",e:"Employee series",m_t:"For managers",e_t:"For employees",m_s:"3 videos and 3 practice activities",e_s:"2 videos and 2 practice activities",
+ m_l:"Prepare the conversation, deliver feedback clearly, and keep it a dialogue when views differ.",e_l:"Prepare your evidence, listen with an open mind, and make your voice heard.",
+ d:"1:1 meetings run <b>29 Nov to 5 Dec</b>. Use your @floward.com email in every activity.",part:"Part {n} of {t}",open:"Start",soon:"Coming soon",parts:"The series",
+ mir_m:"The other side of the table: the <a href=\"../employees/\">Employee series</a> shows how your team members prepare.",mir_e:"The other side of the table: the <a href=\"../managers/\">Manager series</a> shows how your manager prepares.",all:"All series"},
+ar:{kit:"دليل اجتماع الأداء الفردي",root_t:"مقعدان وحوار واحد",root_l:"سلسلة فيديوهات قصيرة لكل طرف في الاجتماع الفردي، يتبع كل فيديو تمرين خاص به.",
+ m:"سلسلة المديرين",e:"سلسلة الموظفين",m_t:"للمديرين",e_t:"للموظفين",m_s:"3 فيديوهات و3 تمارين",e_s:"فيديوهان وتمرينان",
+ m_l:"استعد للحوار، وقدّم ملاحظاتك بوضوح، وحافظ على الحوار عندما تختلف وجهات النظر.",e_l:"جهّز أدلتك، واستمع بعقل منفتح، واجعل صوتك مسموعًا.",
+ d:"تُعقد الاجتماعات الفردية <b>من 29 نوفمبر إلى 5 ديسمبر</b>. استخدم بريدك ‎@floward.com في كل تمرين.",part:"الجزء {n} من {t}",open:"ابدأ",soon:"قريبًا",parts:"السلسلة",
+ mir_m:"الجانب الآخر من الطاولة: <a href=\"../employees/\">سلسلة الموظفين</a> توضح كيف يستعد أعضاء فريقك.",mir_e:"الجانب الآخر من الطاولة: <a href=\"../managers/\">سلسلة المديرين</a> توضح كيف يستعد مديرك.",all:"كل السلاسل"}};
+var S={
+ managers:[{p:"prepare/",en:["Before the Conversation","Practice: Plan your 1:1 meeting"],ar:["قبل الحوار","التمرين: خطّط لاجتماعك الفردي"]},
+  {p:"",en:["Beyond the Sandwich","Practice: Choose your approach"],ar:["ما بعد أسلوب الساندويتش","التمرين: اختر أسلوبك"]},
+  {p:"",en:["When Perspectives Differ","Practice: Keep it a dialogue"],ar:["عندما تختلف وجهات النظر","التمرين: حافظ على الحوار"]}],
+ employees:[{p:"prepare/",en:["Before the Conversation","Practice: Plan your 1:1 meeting"],ar:["قبل الحوار","التمرين: خطّط لاجتماعك الفردي"]},
+  {p:"",en:["Make Your Voice Heard","Practice: Say it so it's heard"],ar:["اجعل صوتك مسموعًا","التمرين: قلها بطريقة تُسمع"]}]};
+var path=location.pathname, sec=/\/managers\/?$/.test(path)?"managers":(/\/employees\/?$/.test(path)?"employees":"");
+var lang=/^ar\b/i.test(new URLSearchParams(location.search).get("lang")||"")?"ar":"en";
+function q(){ return lang==="ar"?"?lang=ar":""; }
+function render(){ var L=T[lang], h="";
+ document.documentElement.lang=lang; document.documentElement.dir=lang==="ar"?"rtl":"ltr";
+ document.querySelectorAll(".lang button").forEach(function(b){b.setAttribute("aria-pressed",String(b.getAttribute("data-lang")===lang));});
+ document.getElementById("eb").textContent=L.kit;
+ if(!sec){ document.title=L.kit+" | Floward"; document.getElementById("pill").innerHTML=""; document.getElementById("t").textContent=L.root_t; document.getElementById("l").textContent=L.root_l;
+  h='<div class="dates">'+L.d+'</div><div class="seat"><a href="managers/'+q()+'"><span class="eyebrow">'+L.m+'</span><b>'+L.m_t+'</b><small>'+L.m_s+'</small></a><a class="e" href="employees/'+q()+'"><span class="eyebrow">'+L.e+'</span><b>'+L.e_t+'</b><small>'+L.e_s+'</small></a></div>';
+ } else { var k=sec==="managers"?"m":"e", list=S[sec];
+  document.title=L[k]+" | "+L.kit; document.getElementById("pill").innerHTML='<span class="pill">'+L[k]+'</span>';
+  document.getElementById("t").textContent=L[k+"_t"]; document.getElementById("l").textContent=L[k+"_l"];
+  h='<div class="dates">'+L.d+'</div><h2>'+L.parts+'</h2><ul class="acts">'+list.map(function(a,i){ var c=a[lang], inner='<span class="n">'+(i+1)+'</span><span><small>'+L.part.replace("{n}",i+1).replace("{t}",list.length)+'</small><b>'+c[0]+'</b><small>'+c[1]+'</small></span><span class="go">'+(a.p?L.open:L.soon)+'</span>';
+   return '<li>'+(a.p?'<a class="act" href="'+a.p+q()+'">'+inner+'</a>':'<div class="act soon" aria-disabled="true">'+inner+'</div>')+'</li>'; }).join("")+'</ul>';
+  h+='<div class="mirror">'+L["mir_"+k]+'</div><p style="margin-top:16px;font-size:15px"><a href="../'+q()+'" style="color:var(--teal)">'+L.all+'</a></p>';
+ }
+ document.getElementById("main").innerHTML=h;
+}
+document.addEventListener("click",function(e){var b=e.target.closest("[data-lang]");if(b){lang=b.getAttribute("data-lang");render();}});
+render();
+})();
+</script>
+</body>
+</html>
