@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Keep it a dialogue | Manager series | The Performance One-to-One Toolkit</title>
+</head>
+<body>
+<script>
+var F={name:{en:"Faisal",ar:"فيصل"},role:{en:"Manager, Supply Chain",ar:"مدير، سلاسل الإمداد"}};
+var NOUR={name:{en:"Nour",ar:"نور"},role:{en:"Supply Chain",ar:"سلاسل الإمداد"}};
+window.ACT={
+ id:"toolkit-m-dialogue-v1",
+ kit:{en:"Manager series, Part 3 of 3",ar:"سلسلة المديرين، الجزء 3 من 3"},
+ title:{en:"Keep it a dialogue",ar:"حافظ على الحوار"},
+ lead:{en:"Four moments where views differ. Choose the reply that keeps the conversation open: listen, acknowledge, explore, align.",ar:"أربع لحظات تختلف فيها وجهات النظر. اختر الرد الذي يُبقي الحوار مفتوحًا: استمع، اعترف، استكشف، اتفق."},
+ how:{en:["Read what your team member says.","Choose the reply you would give.","See which step each reply serves, or skips."],
+      ar:["اقرأ ما يقوله عضو فريقك.","اختر الرد الذي ستقوله.","اطّلع على الخطوة التي يخدمها كل رد أو يتجاوزها."]},
+ time:{en:"About 4 minutes.",ar:"نحو 4 دقائق."},
+ steps:[
+  {type:"choice",id:"nour1",label:{en:"Nour: the first reply",ar:"نور: الرد الأول"},
+   title:{en:"Moment 1: a different view",ar:"اللحظة 1: وجهة نظر مختلفة"},
+   who:NOUR,said:{en:"I don't agree with my rating.",ar:"لا أتفق مع تقييمي."},
+   ask:{en:"How should Faisal reply?",ar:"كيف يجب أن يرد فيصل؟"},
+   opts:[
+    {id:"a",en:"The ratings are final. There's nothing to discuss.",ar:"التقييمات نهائية، ولا يوجد ما نناقشه.",tag:{en:"Skips Listen",ar:"يتجاوز الاستماع"},
+     why:{en:"It ends the conversation before she has said why.",ar:"ينهي الحوار قبل أن توضح السبب."}},
+    {id:"b",rec:1,en:"Thank you for telling me. Walk me through the examples you feel I missed.",ar:"شكرًا لأنك أخبرتِني. حدّثيني عن الأمثلة التي تشعرين أنني لم أنتبه لها.",tag:{en:"Listen, then explore",ar:"استمع ثم استكشف"},
+     why:{en:"It invites her evidence first, so the conversation is about facts, not feelings.",ar:"يدعوها لعرض أدلتها أولًا، فيصبح الحوار عن الحقائق لا المشاعر."}},
+    {id:"c",en:"Everyone thinks their rating should be higher.",ar:"الجميع يرى أن تقييمه يجب أن يكون أعلى.",tag:{en:"Skips Acknowledge",ar:"يتجاوز الاعتراف"},
+     why:{en:"It dismisses her view by grouping her with everyone else.",ar:"يتجاهل وجهة نظرها بوضعها مع الجميع."}}]},
+  {type:"choice",id:"nour2",label:{en:"Nour: the second turn",ar:"نور: الرد الثاني"},
+   title:{en:"Moment 1, continued",ar:"اللحظة 1، تابع"},
+   prev:{en:"Faisal asked Nour to walk him through her examples.",ar:"طلب فيصل من نور أن تحدّثه عن أمثلتها."},
+   who:NOUR,said:{en:"I rebuilt the supplier onboarding checklist. Setup time dropped from 10 days to 6.",ar:"أعدت بناء قائمة تهيئة الموردين، فانخفض وقت الإعداد من 10 أيام إلى 6."},
+   ask:{en:"How should Faisal respond?",ar:"كيف يجب أن يرد فيصل؟"},
+   opts:[
+    {id:"a",rec:1,en:"That's a real result, thank you. Here's how I reached 3.0: onboarding was one of four objectives, and on-time PO delivery landed at 86%. Let's look at both together.",ar:"هذه نتيجة حقيقية، شكرًا لكِ. إليكِ كيف وصلت إلى 3.0: التهيئة كانت هدفًا من أربعة أهداف، وبلغ التسليم في الموعد لأوامر الشراء 86%. لننظر إلى الأمرين معًا.",tag:{en:"Explore, then align",ar:"استكشف ثم اتفق"},
+     why:{en:"He recognises the evidence and explains his rationale openly, so they look at the full picture together.",ar:"يقدّر الدليل ويشرح أسبابه بوضوح، فينظران إلى الصورة الكاملة معًا."}},
+    {id:"b",en:"Fine, I'll change it to 4.0.",ar:"حسنًا، سأغيره إلى 4.0.",tag:{en:"Skips Explore",ar:"يتجاوز الاستكشاف"},
+     why:{en:"Changing it on the spot, without the full picture, is not fair to Nour or to the team. Explain first, then review together.",ar:"التغيير الفوري دون الصورة الكاملة ليس عادلًا لنور ولا للفريق. اشرح أولًا، ثم راجعا معًا."}},
+    {id:"c",en:"Okay. Anything else?",ar:"حسنًا. هل هناك شيء آخر؟",tag:{en:"Skips Acknowledge",ar:"يتجاوز الاعتراف"},
+     why:{en:"Moving on without responding to her evidence tells her it didn't count.",ar:"الانتقال دون الرد على دليلها يوحي لها بأنه لم يُحتسب."}}]},
+  {type:"choice",id:"lina",label:{en:"Lina: when emotions rise",ar:"لينا: عندما تتصاعد المشاعر"},
+   title:{en:"Moment 2: emotions rise",ar:"اللحظة 2: تتصاعد المشاعر"},act:1,
+   who:{name:{en:"Lina",ar:"لينا"},role:{en:"Marketing",ar:"التسويق"}},
+   said:{en:"Lina goes quiet. Her eyes are welling up.",ar:"تصمت لينا، وتغرورق عيناها بالدموع."},
+   ask:{en:"What do you say?",ar:"ماذا تقول؟"},
+   opts:[
+    {id:"a",en:"Let's not get emotional.",ar:"لا داعي للانفعال.",tag:{en:"Skips Acknowledge",ar:"يتجاوز الاعتراف"},
+     why:{en:"It treats the feeling as the problem and closes the conversation.",ar:"يتعامل مع الشعور كأنه المشكلة، ويغلق الحوار."}},
+    {id:"b",rec:1,en:"I can see this matters to you. Take a moment; we'll continue when you're ready.",ar:"أرى أن هذا مهم بالنسبة لكِ. خذي وقتك، وسنكمل عندما تكونين مستعدة.",tag:{en:"Acknowledge",ar:"اعترف"},
+     why:{en:"Naming what you see and giving it space keeps her in the conversation.",ar:"تسمية ما تراه وإعطاؤه مساحة يُبقيها في الحوار."}},
+    {id:"c",en:"Should we just stop here?",ar:"هل نتوقف هنا؟",tag:{en:"No next step",ar:"بلا خطوة تالية"},
+     why:{en:"A pause can be right, but agree when you will pick it up again, or it becomes avoidance.",ar:"قد يكون التوقف مناسبًا، لكن اتفقا على موعد الاستكمال، وإلا أصبح تهربًا."}}]},
+  {type:"choice",id:"tamer",label:{en:"Tamer: a surprise",ar:"تامر: مفاجأة"},
+   title:{en:"Moment 3: it feels like a surprise",ar:"اللحظة 3: يبدو الأمر مفاجئًا"},
+   who:{name:{en:"Tamer",ar:"تامر"},role:{en:"Finance",ar:"المالية"}},
+   said:{en:"This is the first time I'm hearing this.",ar:"هذه أول مرة أسمع فيها هذا."},
+   ask:{en:"What do you say?",ar:"ماذا تقول؟"},
+   opts:[
+    {id:"a",en:"You should have known.",ar:"كان يجب أن تعرف.",tag:{en:"Skips Listen",ar:"يتجاوز الاستماع"},
+     why:{en:"Blame shuts the conversation down and leaves the gap unexplained.",ar:"اللوم يغلق الحوار ويترك الفجوة دون تفسير."}},
+    {id:"b",rec:1,en:"Let's look at when we last discussed it. Where did we lose each other?",ar:"لنرَ متى ناقشنا هذا آخر مرة. أين فقدنا التواصل؟",tag:{en:"Explore",ar:"استكشف"},
+     why:{en:"It finds where the communication broke down, so it doesn't happen again.",ar:"يكشف أين انقطع التواصل، حتى لا يتكرر ذلك."}},
+    {id:"c",en:"Well, it's in the system now.",ar:"على أي حال، هو مسجل في النظام الآن.",tag:{en:"Skips Acknowledge",ar:"يتجاوز الاعتراف"},
+     why:{en:"Pointing to the record doesn't address why it felt like a surprise.",ar:"الإشارة إلى السجل لا تعالج سبب شعوره بالمفاجأة."}}]},
+  {type:"choice",id:"mariam",label:{en:"Mariam: outside factors",ar:"مريم: عوامل خارجية"},
+   title:{en:"Moment 4: outside factors",ar:"اللحظة 4: عوامل خارجية"},
+   who:{name:{en:"Mariam",ar:"مريم"},role:{en:"Customer Care",ar:"خدمة العملاء"}},
+   said:{en:"The system outage hit everyone's numbers.",ar:"تعطل النظام أثّر على أرقام الجميع."},
+   ask:{en:"What do you say?",ar:"ماذا تقول؟"},
+   opts:[
+    {id:"a",en:"That's an excuse.",ar:"هذا مجرد عذر.",tag:{en:"Skips Acknowledge",ar:"يتجاوز الاعتراف"},
+     why:{en:"The context was real. Dismissing it costs trust.",ar:"السياق كان حقيقيًا، وتجاهله يُفقد الثقة."}},
+    {id:"b",rec:1,en:"The outage was real. Within what you could control, what would you do differently?",ar:"التعطل كان حقيقيًا. ضمن ما كان بيدك، ما الذي كنتِ ستفعلينه بشكل مختلف؟",tag:{en:"Acknowledge, then explore",ar:"اعترف ثم استكشف"},
+     why:{en:"It accepts the context, then turns to what was in her hands.",ar:"يقبل السياق، ثم ينتقل إلى ما كان في يدها."}},
+    {id:"c",en:"Then let's ignore that objective.",ar:"إذًا لنتجاهل هذا الهدف.",tag:{en:"Skips Explore",ar:"يتجاوز الاستكشاف"},
+     why:{en:"It removes the objective without looking at what she could still influence.",ar:"يُلغي الهدف دون النظر إلى ما كان لا يزال بإمكانها التأثير فيه."}}]}],
+ doneTitle:{en:"A dialogue, not a contest",ar:"حوار لا منافسة"},
+ take:{en:["Listen first: ask for their examples before you explain.","Acknowledge what you hear, including emotion and real context.","Explore what was in their hands, then agree what happens next."],
+       ar:["استمع أولًا: اطلب أمثلتهم قبل أن تشرح.","اعترف بما تسمعه، بما في ذلك المشاعر والسياق الحقيقي.","استكشف ما كان في أيديهم، ثم اتفقا على ما سيحدث بعد ذلك."]},
+ other:{href:"../../employees/",en:"See the other side: how Nour makes her voice heard",ar:"شاهد الجانب الآخر: كيف تجعل نور صوتها مسموعًا"}
+};
+</script>
+<script src="../../config.js"></script>
+<script src="../../engine.js"></script>
+</body>
+</html>
